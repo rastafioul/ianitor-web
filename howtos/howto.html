@@ -1,0 +1,315 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <section id="whatisianitorForMainAdmin">
+            <h1 id="whatisianitorForMainAdminH1">Qu'est-ce que Ianitor</h1>
+            Ianitor est un service de gestion de portes et portail à distance.<br>
+            <h2 id="serviceComposition">Composition de Ianitor </h2>
+            Le service Iantor est composé d'une partie <strong> logicielle</strong> (celle visible sur votre ecran) et une partie <strong> "hardware"</strong>.<br>
+            <h3 id="hardwarePartShort">La partie hardware</h3>
+            <p>c'est un petit boitier qui permet de simuler l'appui sur un bouton.<br>
+                En connectant ce boitier à un appareil, il est possible de le controler.<br>
+                Ainsi, vous pouvez ouvrir un portail, une porte, baisser des rideaux, allumer une lumière...</p>
+            <p>Pour ceux qui n'ont pas accès à l'appareil mais qui ont une télécommande et qui sont filous, nous dédions le paragraphe "pirate box"</p>
+            <h3 id="softwarePartShort">La partie logicielle</h3>
+            <p>C'est celle que vous avez sur vos écrans et qui, une fois configurée, permet de contrôler vos appareils</p>
+
+            <h2 id="organisationsoftware">Organisation du logiciel</h2>
+            Le service Ianitor est une application développée par une entreprise qui utilise les services d'un tiers (Saashup avec des gens super compétents et sympas) pour sa mise en ligne</br>
+            <p>En quoi est-ce <strong>important</strong>?</p>
+            <p>
+            Simplement par ce que ce sont des professionnels du domaine qui gèrent la sécurité, la gestion des abonnements et s'assurent du bon déploiment de votre instance.<br>
+            Il reste que Ianitor est responsable du bon fonctionnement de son application et de sa sécurité interne.<br>
+            </p>
+            <p>
+            Dans votre proccessus d'inscription, vous aurez donc un compte chez saashup (avec une authentification par le biais d'un prestataire de confiance auth0) qui vous permet de faire votre gestion d'abonnements.
+            </br>
+            puis un autre compte dans votre instance de l'application Ianitor qui vous permettra de gérer vos portes et portails.
+            </p>
+
+
+        </section>
+        <section id="useIanitor">
+            <h1 id="useIanitorH1">Utiliser Ianitor</h1>
+            <section id="saashupOrderingForMainAdmin">
+                <h1 id="saashupOrderingForMainAdminH1">Commander votre service Ianitor</h1>
+                <h2 id="saashupInscription">s'inscrire chez le prestataire Saashup</h2>
+            </section>
+            <section id="registerFirstTimeForMainAdmin">
+                <h1 id="registerfirsttimeH1">Premier accès à votre instance Ianitor</h1>
+                <p id="creationEntGestionnaire">
+            Une fois l'abonnement effectué, notre prestataire vous fournira rapidement le lien de votre instance de Ianitor. (Même si c'est rapide, il faut le temps de créer votre instance de l'application: caché dans le "cloud internet", il y a du matériel qui travaille)
+            Suivez ce lien (qui doit être du type <strong>TYPEAMETTRE</strong>)et vous tomberez sur une page de ce type:<br>
+            <img src="../images/ianitorInitialisation1bis.png"/><br>
+            L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
+            Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
+            indiquez le informations necessaires puis cliquez suivant</br>
+            </p>
+            <p id="creationEntreprisePrincipale"><br>
+            <img src="../images/ianitorInitialisation2.png"/><br>
+            entrez les informations concernant l'entreprise principale<br>
+            cliquez suivant<br>
+            </p>
+            <p id="creationUser">
+            entrez vos identifiants, veillez à être au moins administrateur.<br>
+            <img src="../images/ianitorInitialisation3.png"/><br>
+            cliquez suivant<br>
+            </p>
+            <p id="creationPortier">
+            creez le portier qui permettra d'ouvrir les portes.<br>
+            un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
+            <img src="../images/ianitorInitialisation4.png"/><br>
+            cliquez suivant<br>
+            </p>
+            <p id="creationPorte">
+            nommez la premiere porte avec sa localisation.<br>
+            <img src="../images/ianitorInitialisation5.png"/><br>
+            cliquez creer<br>
+            vous serez redirigé vers la page d'identifiants.
+            </p>
+            </section>
+            <section id="appUseForMainAdmin">
+                <p id="loginpage">
+            indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
+            <img src="../images/ianitorLoginPage.png"/>
+            </p>
+            <p id="pageAccueil1">
+                sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
+                Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
+                <img src="../images/ianitor1erePage.png"/><br>
+
+                cliquez sur "administration" puis "config portes"
+            </p>
+
+            <p id="pageConfigPortes">
+                <h2 id="configPortesH2">Configuration des portes</h2>
+                <p id="configPortesAvertissement">
+                    <h2 style="color:red">Avertissement</h2>
+                    Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
+                </p>
+                <p id="configPortier">
+                    <img src="../images/ianitorConfigPortes1.png"/>
+                    Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
+                    Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
+                    Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
+                    <img src="../images/ianitorConfigPorteLoginHotePwd-Portier.png"/>
+
+                    <p>
+                        une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a>des identifiants de votre wifi et de votre instance iantior.
+                    </p>
+                    <p id="confLed">
+                        <h3 id="confLedH3">Configuration de la led</h3>
+                        ayez le portier à vos côtés pour vérifier l'allumage de la led.<br>
+                        sur la page "administration/config. portes", cliquez sur éditer le portier,<br>
+                        Suivant le type de portier que vous avez, préférez tester les "gpio" 2, 5, 17, 23.<br>
+                        Quand au clique de "test", la led s'allume puis s'éteint. Ceci signifie que le gpio adéquate est trouvé.<br>
+                        vous pouvez alors "mettre à jour la led du portier".<br>
+                    </p>
+                    <p id="confRelaisInverses">
+                        <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
+                        Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
+                        <img src="../images/relais 5vMonoFleches.jpg"><br>
+                        A sa mise en tension, il va se mettre dans sa position normale.<br>
+                        Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
+                        Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
+                        Toutefois, après avoir cliqué sur "editer le portier", vous pouvez choisir d'inverser l'état du relais en cliquant sur "relais inversé".<br>
+                        Si le fond devient vert, alors, le changement est enregistré.<br>
+                    </p>
+                </p>
+                <p id="configPorte">
+                    <h2 id="configPorteH2">Configuration d'un porte</h2>
+                    <p id="configPorteSummary">
+                        vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
+                        <img src="../images/ianitorConfigPortes1.png"/><br>
+                        <img src="../images/ianitorConfigPortes2.png"/><br>
+                        Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
+                        L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
+                        <img src="../images/ianitorConfigPorteImage.png"/><br>
+                        <img src="../images/ianitorAccueilImageDisabled.png"/><br><br>
+
+                        De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
+                        <img src="../images/ianitorConfigPorteGpio.png"/>
+
+                    </p>
+                </p>
+            </p>
+            </section>
+            <section id="configPortiersSoftware">
+                <h2 id="configPortierSoftwareH2">Configuration logicielle des portiers (les appareils -esp32- avec les relais) </h2>
+
+                Quand la led de l'appareil clignote* au rythme d'1/2 seconde/seconde, vous pouvez vous connecter à son reseau (nom: Portier Ianitor).<br>
+                Vous avez x secondes avant qu'il essaie de se connecter à un réseau et donc arreter le sien pendant ce temps.<br>
+                une fois connecté au réseau wifi du portier, allez sur un navigateur et entrez l'adresse <strong>http://192.168.4.1</strong>
+                sur cette page,
+                indiquez le nom du wifi et son mot de passe ainsi que le hostname, login et mot de passe du portier.<br>
+                Validez.<br>
+                Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
+                S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
+                <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
+            </section>
+            <section id="configPortiersIanitors">
+                <h2 id="configPortierHardwareH2">Configuration matérielle des portiers</h2>
+
+                <p id="materielIanitor">
+                    <h2>les portiers</h2>
+                    <ul id="portiersExistants">
+                        <li>module esp32 Wroom + relais</li>
+                        <li>module wt32 + relais</li>
+                        <li>carte esp32 avec relais inclus</li>
+                    </ul>
+                    <div id="esp32PlusRelais">
+                        <p>
+                            esp 32 testé:
+                            https://www.amazon.fr/gp/product/B09ZDHNW9L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                            (encore non testé) https://fr.aliexpress.com/item/4000296658456.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+
+                        </p>
+                        <p>
+                            relais testé:
+                            https://www.amazon.fr/gp/product/B07MY2R2ML/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                        </p>
+                        <p>
+                            Branchements usb.
+                        </p>
+                        <p>
+                            upload firmware et fichiers littleFS
+
+                            <h4 id="esp32Wroom32Uparlinux">
+                                esp32 Wroom 32U parlinux
+                            </h4>
+                            python3 /home/*USER*/.arduino15/packages/esp32/tools/esptool_py/4.2.1/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bootloader.bin 0x8000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.partitions.bin 0xe000 /home/*USER*/.arduino15/packages/esp32/hardware/esp32/2.0.5/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bin 
+
+                        </p>
+                        <p>
+                            Branchements relais
+                            http://tiptopboards.free.fr/arduino_forum/viewtopic.php?f=2&t=33
+                            https://arduino-france.site/module-relais/
+                        </p>
+                        <p>
+                            tests
+                        </p>
+                    </div>
+                    <div id="WT32PlusRelais">
+                        <p>
+                            esp 32 testé:<br>
+                            https://fr.aliexpress.com/item/1005004621301847.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+                        </p>
+                        <p>
+                            relais testé:
+                        </p>
+                        <p>
+                            Branchements upload
+                        </p>
+                        <p>
+                            upload firmware et fichiers littleFS
+                        </p>
+                        <p>
+                            Branchements relais
+                        </p>
+                        <p>
+                            tests
+                        </p>
+                    </div>
+                    <div id="carteEsp32WithRelais">
+                        <p>
+                            esp 32 testé:<br>
+                            https://fr.aliexpress.com/item/1005001908732109.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra avec l'option "ESP32-WROOM edition"
+                        </p>
+                        <p>
+                            relais testé:
+                        </p>
+                        <p>
+                            Branchements upload
+                        </p>
+                        <p>
+                            upload firmware et fichiers littleFS
+                        </p>
+                        <p>
+                            Branchements relais
+                        </p>
+                        <p>
+                            tests
+                        </p>
+                    </div>
+                </p>
+            </section>
+            <section id="confiNewEnt">
+                <h2 id="confiNewEntH2">Création nouvelle entreprise</h2>
+
+                <p id="creation nouvelle entreprise">
+                    Alez dans "administration/infos generales".<br>
+                    <img src="../images/ianitorAdminInfoGen.png"><br>
+                    cliquez "nouvelle entreprise"<br>
+                    remplissez les champs<br>
+                    <img src="../images/ianitorAdminNewEntRemplie.png" alt="">
+                    validez en cliquant "creer"<br>
+                    Pensez à creer l'administrateur qui gérera les identifiants des employés de l'entreprise.<br>
+                    Double cliquez sur le nom de l'entreprise ou choissisez dans le menu du haut l'entreprise souhaitée<br>
+                    Dans "administration/utilisateurs", cliquez sur "nouveau"<br>
+                    remplissez les champs en vous assurant que vous avez bien cliqué sur "administrateur" pour que ce compte puisse gèrer les fonctions disponibles à cette entreprise.
+                    <img src="../images/ianitorAdminNewUserModalRemplie.png" alt=""><br>
+                    Cet utilisateur apparaitra dans "administration/utilisateurs" et pourra alors gèrer les comptes de son entreprise.<br>
+                    <img src="../images/ianitorAdminUsers1erUser.png" alt="">
+                </p>
+            </section>
+            <img src="../images/ianitor1erePageChgtPlaqueComm.png"/>
+        </section>
+
+        <section id="definitions">
+            <h1 id="definitionsH1">Définitions</h1>
+            <div id="applicationPdiv">
+                <h5>application</h5>
+                <figure class="text-center">
+                <blockquote class="blockquote">
+                    <p id="applicationP">
+                        est, dans le domaine informatique, un programme (ou un ensemble logiciel) directement utilisé pour réaliser une tâche, ou un ensemble de tâches élémentaires d'un même domaine ou formant un tout
+                
+                        Typiquement, un éditeur de texte, un navigateur web, un lecteur multimédia, un jeu vidéo, sont des applications. Les applications s'exécutent en utilisant les services du système d'exploitation pour utiliser les ressources matérielles. 
+                    </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <a href="https://fr.wikipedia.org/wiki/Application_(informatique)">Application_(informatique) - wikipedia</a>
+                </figcaption>
+                </figure>
+            </div>
+            <div id="instancePdiv">
+                <h5>Instance</h5>
+                <p id="instanceP">
+                    est une entité de l'application informatique:<br>
+                    l'application est le programme en code informatique, l'instance vous permet de l'utiliser et elle vous appartient.
+                </p>
+            </div>
+            <div id="portierPdiv">
+                <h5>portier (ianitor)</h5>
+                <p id="portierP">
+                    dans cette application, il est un appareil qui permet de déclencher l'ouverture des portes.<br>
+                    un portier Ianitor est un appareil electronique avec un ESP32 Wroom.
+                </p>
+            </div>
+            <div id="tpsActionRelaisPdiv">
+                <h5>temps d'action du relais</h5>
+                <p id="tpsActionRelaisP">
+                    est le temps de changement d'état du relais par rapport à sa position de repos lorsqu'une demande d'ouverture est demandée.
+                </p>
+        </div>
+        </section>
+    </body>
+    <script>
+        function changeImageSrc()
+        {
+            for(let thisImg of document.getElementsByTagName("img"))
+            {
+                let splitSrc = thisImg.src.split("/");
+                thisImg.src = splitSrc[splitSrc.length-1];
+            }
+            //document.getElementById("imageid").src="../template/save.png";
+        }
+        document.addEventListener("DOMContentLoaded", function(event) { 
+        //do work
+            
+            //changeImageSrc();
+        });
+    </script>
+</html>
