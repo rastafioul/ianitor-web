@@ -1,8 +1,95 @@
+<!DOCTYPE html>
+
+
+
+
 <html>
     <head>
+        <meta name="color-scheme" content="dark light">
+        <style>
 
+
+            .day {
+            background: #eee;
+            color: black;
+            }
+            .night {
+            background: #333;
+            color: white;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                body {
+                    --text-color: #eee;
+                    --bkg-color: #121212;
+                }
+                body.light-theme {
+                    --text-color: #222;
+                    --bkg-color: #fff;
+                }
+            .day.dark-scheme {
+                background: #333;
+                color: white;
+            }
+            .night.dark-scheme {
+                background: black;
+                color: #ddd;
+            }
+            }
+
+            body {
+                background: var(--bkg-color);
+                }
+
+            .imgPadding{
+                margin: 2rem;
+            }
+            /* @media (prefers-color-scheme: light) {
+            .day.light-scheme {
+                background: white;
+                color: #555;
+            }
+            .night.light-scheme {
+                background: #eee;
+                color: black;
+            }
+            }
+ 
+            .day,
+            .night {
+            display: inline-block;
+            padding: 1em;
+            width: 7em;
+            height: 2em;
+            vertical-align: middle;
+            } */
+
+            .margin-constraint{
+            /*On indique tout simplement une marge*/
+            margin-left: 20px;
+            margin-right: 20px;
+            }
+
+            .useful-width{
+            /*On règle ensuite la largeur utile puis on centre*/
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            .margin-constraint, .useful-width{
+            /*Si vous utilisez uniquement des div, cette dernière règle css n’est même pas nécessaire*/
+            display: block;
+            width: auto;
+            }
+
+        </style>
     </head>
     <body>
+        <div class="full-width">
+            <div class="margin-constraint">
+                <div class="useful-width">
+
         <section id="whatisianitorForMainAdmin">
             <h1 id="whatisianitorForMainAdminH1">Qu'est-ce que Ianitor</h1>
             Ianitor est un service de gestion de portes et portail à distance.<br>
@@ -42,30 +129,40 @@
                 <p id="creationEntGestionnaire">
             Une fois l'abonnement effectué, notre prestataire vous fournira rapidement le lien de votre instance de Ianitor. (Même si c'est rapide, il faut le temps de créer votre instance de l'application: caché dans le "cloud internet", il y a du matériel qui travaille)
             Suivez ce lien (qui doit être du type <strong>TYPEAMETTRE</strong>)et vous tomberez sur une page de ce type:<br>
-            <img src="../images/ianitorInitialisation1bis.png"/><br>
+            <div class="imgPadding">
+                <img width="100%" src="../images/ianitorInitialisation1bis.png"/>
+            </div>
             L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
             Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
             indiquez le informations necessaires puis cliquez suivant</br>
             </p>
             <p id="creationEntreprisePrincipale"><br>
-            <img src="../images/ianitorInitialisation2.png"/><br>
+                <div class="imgPadding">
+<div class="imgPadding">
+    <img width="100%" src="../images/ianitorInitialisation2.png"/>
+    </div>
             entrez les informations concernant l'entreprise principale<br>
             cliquez suivant<br>
             </p>
             <p id="creationUser">
             entrez vos identifiants, veillez à être au moins administrateur.<br>
-            <img src="../images/ianitorInitialisation3.png"/><br>
+<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation3.png"/>
+    </div>
+
             cliquez suivant<br>
             </p>
             <p id="creationPortier">
             creez le portier qui permettra d'ouvrir les portes.<br>
             un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
-            <img src="../images/ianitorInitialisation4.png"/><br>
+            
+<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation4.png"/>
+    </div>
             cliquez suivant<br>
             </p>
             <p id="creationPorte">
             nommez la premiere porte avec sa localisation.<br>
-            <img src="../images/ianitorInitialisation5.png"/><br>
+<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation5.png"/>
+    </div>
             cliquez creer<br>
             vous serez redirigé vers la page d'identifiants.
             </p>
@@ -73,12 +170,14 @@
             <section id="appUseForMainAdmin">
                 <p id="loginpage">
             indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
-            <img src="../images/ianitorLoginPage.png"/>
+<div class="imgPadding"><img width="100%" src="../images/ianitorLoginPage.png"/>
+    </div>
             </p>
             <p id="pageAccueil1">
                 sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
                 Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
-                <img src="../images/ianitor1erePage.png"/><br>
+                <div class="imgPadding">
+                <img width="100%" src="../images/ianitor1erePage.png"/></div>
 
                 cliquez sur "administration" puis "config portes"
             </p>
@@ -90,14 +189,18 @@
                     Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
                 </p>
                 <p id="configPortier">
-                    <img src="../images/ianitorConfigPortes1.png"/>
+                    <div class="imgPadding">
+                        <img width="100%" src="../images/ianitorConfigPortes1.png"/>
+                    </div>  
                     Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
                     Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
                     Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
-                    <img src="../images/ianitorConfigPorteLoginHotePwd-Portier.png"/>
+                    <div class="imgPadding">
+                    <img width="50%" src="../images/ianitorConfigPorteLoginHotePwd-Portier.png"/>
+                    </div>
 
                     <p>
-                        une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a>des identifiants de votre wifi et de votre instance iantior.
+                        une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a> des identifiants de votre wifi et de votre instance iantior.
                     </p>
                     <p id="confLed">
                         <h3 id="confLedH3">Configuration de la led</h3>
@@ -110,7 +213,9 @@
                     <p id="confRelaisInverses">
                         <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
                         Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
-                        <img src="../images/relais 5vMonoFleches.jpg"><br>
+                        <div class="imgPadding">
+                            <img width="100%" src="../images/relais 5vMonoFleches.jpg">
+                        </div>
                         A sa mise en tension, il va se mettre dans sa position normale.<br>
                         Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
                         Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
@@ -122,15 +227,26 @@
                     <h2 id="configPorteH2">Configuration d'un porte</h2>
                     <p id="configPorteSummary">
                         vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
-                        <img src="../images/ianitorConfigPortes1.png"/><br>
-                        <img src="../images/ianitorConfigPortes2.png"/><br>
+                        <div class="imgPadding">
+                            <img width="100%" src="../images/ianitorConfigPortes1.png"/><br>
+                        </div>
+                        <div class="imgPadding">
+                            <img width="50%" src="../images/ianitorConfigPortes2.png"/>
+                        </div>
                         Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
                         L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
-                        <img src="../images/ianitorConfigPorteImage.png"/><br>
-                        <img src="../images/ianitorAccueilImageDisabled.png"/><br><br>
+                        <div class="imgPadding">
+                            <img width="50%" src="../images/ianitorConfigPorteImage.png"/>
+                        </div>
+                        <div class="imgPadding">
+                            <img width="100%" src="../images/ianitorAccueilImageDisabled.png"/>
+                        </div>
+                        </br>
 
                         De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
-                        <img src="../images/ianitorConfigPorteGpio.png"/>
+                        <div class="imgPadding">
+                            <img width="50%" src="../images/ianitorConfigPorteGpio.png"/>
+                        </div>
 
                     </p>
                 </p>
@@ -240,21 +356,31 @@
 
                 <p id="creation nouvelle entreprise">
                     Alez dans "administration/infos generales".<br>
-                    <img src="../images/ianitorAdminInfoGen.png"><br>
+                    <div class="imgPadding">
+                        <img width="100%" src="../images/ianitorAdminInfoGen.png">
+                    </div>
                     cliquez "nouvelle entreprise"<br>
                     remplissez les champs<br>
-                    <img src="../images/ianitorAdminNewEntRemplie.png" alt="">
+                    <div class="imgPadding">
+                        <img width="100%" src="../images/ianitorAdminNewEntRemplie.png" alt="">
+                    </div>
                     validez en cliquant "creer"<br>
                     Pensez à creer l'administrateur qui gérera les identifiants des employés de l'entreprise.<br>
                     Double cliquez sur le nom de l'entreprise ou choissisez dans le menu du haut l'entreprise souhaitée<br>
                     Dans "administration/utilisateurs", cliquez sur "nouveau"<br>
                     remplissez les champs en vous assurant que vous avez bien cliqué sur "administrateur" pour que ce compte puisse gèrer les fonctions disponibles à cette entreprise.
-                    <img src="../images/ianitorAdminNewUserModalRemplie.png" alt=""><br>
+                    <div class="imgPadding">
+                        <img width="100%" src="../images/ianitorAdminNewUserModalRemplie.png" alt="">
+                    </div>
                     Cet utilisateur apparaitra dans "administration/utilisateurs" et pourra alors gèrer les comptes de son entreprise.<br>
-                    <img src="../images/ianitorAdminUsers1erUser.png" alt="">
+                    <div class="imgPadding">
+                        <img width="100%" src="../images/ianitorAdminUsers1erUser.png" alt="">
+                    </div>
                 </p>
             </section>
-            <img src="../images/ianitor1erePageChgtPlaqueComm.png"/>
+            <div class="imgPadding">
+                <img width="100%" src="../images/ianitor1erePageChgtPlaqueComm.png"/>
+            </div>
         </section>
 
         <section id="definitions">
@@ -295,6 +421,9 @@
                 </p>
         </div>
         </section>
+    </div>
+</div>
+</div>
     </body>
     <script>
         function changeImageSrc()
