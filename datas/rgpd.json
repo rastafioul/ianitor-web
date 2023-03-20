@@ -1,5 +1,7 @@
 {
-    "eu":{"auditConnections":
+    "eu":{
+        "region":"eu",
+        "auditConnections":
             {
                 "delais":8035200000,
                 "src_rglt":"Norme NS42"
@@ -11,7 +13,9 @@
             }
     },
     "usa":
-    {"auditConnections":
+    {
+        "region":"usa",
+        "auditConnections":
             {
                 "delais":8035200000,
                 "src_rglt":"Norme americaine inconnue"
