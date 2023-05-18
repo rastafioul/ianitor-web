@@ -38,24 +38,20 @@
             <div class="container-fluid">
                 <a class="navbar-brand ianitorFont" href="#">
                     <div class="d-flex p-0 m-0">
-                        <img id="logoIanitorNav" src="/images/logoPortail" ondblclick="makeangry()"
-                            onclick="openthegate()" alt="" width="64" height="64">
+                        <img id="logoIanitorNav" src="/images/logoIanitorV7.png"
+                            alt="" width="64" height="64">
                         <div id="logoText" class="d-col d-none">
                             <div class="row p-0 m-0">Ianitor</div>
                             <div class="d-flex justify-content-end p-0 m-0" style="font-size: 0.5em;">Door keeper</div>
                         </div>
                     </div>
                 </a>
-                <img id="entRecallLogo" class="rounded" src="" width="48" height="48">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex">
-                        <select id="entsToOpenSEL" class="form-select m-2" onchange="loadAdminEnt(this.value)"></select>
-                    </div>
                     <ul id="ulMenu" class="navbar-nav  me-auto mb-2 mb-lg-0">
                         <li class="nav-item text-truncate">
                             <a id="profileHome" class="nav-link active" aria-current="page" data-bs-toggle="collapse"
@@ -76,18 +72,8 @@
                                 onClick="setActiveMenu(this); setActivePage('oldAdministrationTab')" trad="old">old</a>
                         </li>
                     </ul>
-                    <div id="searchallNavbarDIV" class="d-flex d-none">
-                        <div class="form-floating">
-                            <input id="searchallNavbarINP" class="form-control me-2" type="search"
-                                onkeyup='if(event.key=="Enter"){event.preventDefault();document.getElementById("searchImmatsTopBarBtn").click() }'
-                                placeholder="Search" aria-label="Search" value=" ">
-                            <label id="searchallNavbarINPLbl" for="searchallNavbarINP" trad="immat">immat</label>
-                        </div>
-                        <button id="searchImmatsTopBarBtn" class="btn "
-                            onclick="setActiveMenu('profileAdministration'); setActivePage('administrationTab'); $('#entSearch-m')[0].click(); search($('#searchallNavbarINP').val(),'immat')"><i
-                                class="bi bi-search"></i></button>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
+                   
+                    <!-- <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item me-3 me-lg-0 dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -112,26 +98,26 @@
                         </li>
                     </ul>
                     </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>
     </div>
     <div id="mainContainer" class="container">
         
-        <div class="row">
-            <div class="col-sm-12 col-md-6 text-center">
-                SYSTÈMES D’OUVERTURE 
+        <div class="row pb-4">
+            <div class="col-sm-12 col-md-6 text-left display-5">
+               <strong> SYSTÈMES D’OUVERTURE 
 DE PORTES ET PORTAILS AUTOMATIQUES À DISTANCE
-POUR VOTRE ENTREPRISE
+POUR VOTRE ENTREPRISE</strong>
             </div>
             <div class="col-sm-12 col-md-6 text-center">
                 <img src="/images/mainPic.png" alt="">
             </div>
         </div>
-        <div class="row">
-            <p>Vous souhaitez :</p>
-            <ul>
+        <div class="row my-3">
+            <p class="h1">Vous souhaitez :</p>
+            <ul class="ms-4 ps-4">
                 <li>
                     Fournir un accès personnalisé à vos locaux pour vos employés (permanents ou temporaires), au moment que vous avez défini ? 
                 </li>
@@ -140,52 +126,76 @@ POUR VOTRE ENTREPRISE
                 </li>
             </ul>
         </div>
-        <div class="row" style="background-color: #516379">
-            <p style="font: Liberation Sans; font: size 18px;">
+        <div class="row p-5 my-5" style="background-color: #516379; color:white">
+            <p class="display-6">
                 Gérez l’ouverture de vos locaux à distance avec notre solution İanitor 
             </p>
-            <div class="col-3">
-                <div class="row h3">
-                    Securité
+            <div class=" col-3 px-2 text-center col-md-6 col-sm-12">
+                <div class="row h3 text-center">
+                    <div>
+                        Securité
+                    </div>
                 </div>
                 <div class="row">
-                    <img src="/images/picSecurite.png" alt="">
+                    <div>
+                        <img src="/images/picSecurite.png" height="96" alt="">
+                    </div>
                 </div>
                 <div class="row">
-                    Gérez les entrées et sorties de vos locaux
+                    <div>
+                        Gérez les entrées et sorties de vos locaux
+                    </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="row h3">
-                    Autonomie
+            <div class=" col-3 px-2 text-center col-md-6 col-sm-12">
+                <div class="row h3 text-center">
+                    <div>
+                        Autonomie
+                    </div>
                 </div>
                 <div class="row">
-                    <img src="/images/picAutonomie.png" alt="">
+                    <div>
+                        <img src="/images/picAutonomie.png" height="96" alt="">
+                    </div>
                 </div>
                 <div class="row">
-                    Optimisez la mobilité de vos employés et de vos visiteurs
+                    <div>
+                        Optimisez la mobilité de vos employés et de vos visiteurs
+                    </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="row h3">
-                    Facilité
+            <div class=" col-3 px-2 text-center col-md-6 col-sm-12">
+                <div class="row h3 text-center">
+                    <div>
+                        Facilité
+                    </div>
                 </div>
                 <div class="row">
-                    <img src="/images/picFacilite.png" alt="">
+                    <div>
+                        <img src="/images/picFacilite.png" height="96" alt="">
+                    </div>
                 </div>
                 <div class="row">
-                    Installation et utilisation faciles
+                    <div>
+                        Installation et utilisation faciles
+                    </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="row h3">
-                    Pratique
+            <div class=" col-3 px-2 text-center col-md-6 col-sm-12">
+                <div class="row h3 ">
+                    <div>
+                        Pratique
+                    </div>
                 </div>
                 <div class="row">
-                    <img src="/images/picPratique.png" alt="">
+                    <div>
+                        <img src="/images/picPratique.png" height="96" alt="">
+                    </div>
                 </div>
                 <div class="row">
-                    Minimum de logistique et d’équipement
+                    <div>
+                        Minimum de logistique et d’équipement
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,8 +222,10 @@ POUR VOTRE ENTREPRISE
                     et le tour et joué !
                 </div>
             </div>
-            <div class="col-4">
-                <img src="/images/picEngrenages.png" alt="">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+                <div class="">
+                    <img src="/images/picEngrenages.png" width="128" alt="">
+                </div>
             </div>
         </div>
         <div class="row pt-10">
