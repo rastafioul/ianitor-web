@@ -5,6 +5,26 @@
 
 <html>
     <head>
+        <link id="favicon" rel="icon" type="image/png" href="/images/logoIanitorV7.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
+            rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js">
+        </script>
+        
+        <script src="/plugin/jquery.sdBootStrapMenu.js">
+        </script>
         <meta name="color-scheme" content="dark light">
         <style>
 
@@ -86,337 +106,447 @@
         </style>
     </head>
     <body>
-        <div class="full-width">
-            <div class="margin-constraint">
-                <div class="useful-width">
+        <div class="row border-bottom  mb-3">
+            <nav id="navbar-admin" class="py-0 navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand ianitorFont" href="#">
+                        <div class="d-flex p-0 m-0">
+                            <img id="logoIanitorNav" src="/images/logoIanitorV7.png"
+                                alt="" width="64" height="64">
+                            <div id="logoText" class="d-col d-none">
+                                <div class="row p-0 m-0">Ianitor</div>
+                                <div class="d-flex justify-content-end p-0 m-0" style="font-size: 0.5em;">Door keeper</div>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="ulMenu" class="navbar-nav  me-auto mb-2 mb-lg-0">
+                            <li class="nav-item text-truncate">
+                                <a id="profileHome" class="nav-link active" aria-current="page" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                    onClick="setActiveMenu(this); setActivePage('ouvertureTab')"><i
+                                        class="bi bi-door-open-fill"></i> <span trad="ouvertureTab">Home</span></a>
+                            </li>
+
+                            <li class="nav-item text-truncate" data-toggle="collapse">
+                                <a id="profileAdministration" class="nav-link d-none" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                    onClick="setActiveMenu(this); setActivePage('administrationTab')"><i
+                                        class="bi bi-sliders"></i> <span trad="administration">administration</span></a>
+                            </li>
+                            <li class="nav-item text-truncate d-none">
+                                <a id="profileOldAdministration" class="nav-link" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                    onClick="setActiveMenu(this); setActivePage('oldAdministrationTab')" trad="old">old</a>
+                            </li>
+                        </ul>
+                    
+                        <!-- <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item me-3 me-lg-0 dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <img id="avatarUser" src="images/person-fill.svg" class="rounded-circle"
+                                        style="max-width: 32px; max-height: 32px;"></i>
+                                    <span id="nameBar">not logged</span>
+                                    <i class="fas fa-user"></i>
+                                </a>
+                                <ul class="dropdown-menu pb-0" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onClick="setActiveMenu('profile');setActivePage('profilTab')"><span
+                                                class="glyphicon glyphicon-user"></span>
+                                            profile</a>
+                                    <li>
+                                        <hr class="dropdown-divider mb-0">
+                                    </li>
+                                    <a class="dropdown-item " href="#" onclick="logout()"><span
+                                            class="glyphicon glyphicon-log-out"></span>
+                                        logout</a>
+                            </li>
+                        </ul>
+                        </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- <div class="full-width"> -->
+        <div class="container row">
+            <div class="modal fade" id="imgGallery" style="font-family: 'Roboto' , sans-serif;">
+                <div class="modal-dialog modal-xl" >
+                    <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <div class="modal-title" trad="newEnt">gallerie</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" id="mainPicGallery" src="">
+                        </div>
+
+                        <div class="modal-footer">
+                        
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sdScrollMenu" class="col-12 col-sm-4">
+                     
+            </div>
+            <div class="col-12 col-md-8">
+                <div id="scroll-menu" class="">
 
         <section id="whatisianitorForMainAdmin">
-            <h1 id="whatisianitorForMainAdminH1">Qu'est-ce que Ianitor</h1>
+            <h1 id="whatisianitorForMainAdminH1" data-bs-toggle="collapse"  data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="serviceComposition hardwarePartShort softwarePartShort organisationsoftware" role="button">Qu'est-ce que Ianitor</h1>
             Ianitor est un service de gestion de portes et portail à distance.<br>
-            <h2 id="serviceComposition">Composition de Ianitor </h2>
-            Le service Iantor est composé d'une partie <strong> logicielle</strong> (celle visible sur votre ecran) et une partie <strong> "hardware"</strong>.<br>
-            <h3 id="hardwarePartShort">La partie hardware</h3>
-            <p>c'est un petit boitier qui permet de simuler l'appui sur un bouton.<br>
-                En connectant ce boitier à un appareil, il est possible de le controler.<br>
-                Ainsi, vous pouvez ouvrir un portail, une porte, baisser des rideaux, allumer une lumière...</p>
-            <p>Pour ceux qui n'ont pas accès à l'appareil mais qui ont une télécommande et qui sont filous, nous dédions le paragraphe "pirate box"</p>
-            <h3 id="softwarePartShort">La partie logicielle</h3>
-            <p>C'est celle que vous avez sur vos écrans et qui, une fois configurée, permet de contrôler vos appareils</p>
-
-            <h2 id="organisationsoftware">Organisation du logiciel</h2>
-            Le service Ianitor est une application développée par une entreprise qui utilise les services d'un tiers (Saashup avec des gens super compétents et sympas) pour sa mise en ligne</br>
-            <p>En quoi est-ce <strong>important</strong>?</p>
-            <p>
-            Simplement par ce que ce sont des professionnels du domaine qui gèrent la sécurité, la gestion des abonnements et s'assurent du bon déploiment de votre instance.<br>
-            Il reste que Ianitor est responsable du bon fonctionnement de son application et de sa sécurité interne.<br>
+            <h2 id="serviceComposition" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#serviceCompositionTxt" data-bs-target="#serviceCompositionTxt" aria-expanded="false" aria-controls="serviceCompositionTxt" role="button">Composition de Ianitor </h2>
+            <p class="collapse" id="serviceCompositionTxt">
+                Le service Iantor est composé d'une partie <strong> logicielle</strong> (celle visible sur votre ecran) et une partie <strong> "hardware"</strong>.<br>
             </p>
-            <p>
-            Dans votre proccessus d'inscription, vous aurez donc un compte chez saashup (avec une authentification par le biais d'un prestataire de confiance auth0) qui vous permet de faire votre gestion d'abonnements.
-            </br>
-            puis un autre compte dans votre instance de l'application Ianitor qui vous permettra de gérer vos portes et portails.
-            </p>
+            <h3 id="hardwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#hardwarePartShortTxt" aria-expanded="false" role="button">La partie hardware</h3>
+            <div class="collapse" id="hardwarePartShortTxt">
+                <p>c'est un petit boitier qui permet de simuler l'appui sur un bouton.<br>
+                    En connectant ce boitier à un appareil, il est possible de le controler.<br>
+                    Ainsi, vous pouvez ouvrir un portail, une porte, baisser des rideaux, allumer une lumière...</p>
+                <p>Pour ceux qui n'ont pas accès à l'appareil mais qui ont une télécommande et qui sont filous, nous dédions le paragraphe "pirate box"</p>
+            </div>
+            <h3 id="softwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#softwarePartShortTxt" aria-expanded="false" role="button">La partie logicielle</h3>
+            <p class="collapse" id="softwarePartShortTxt">C'est celle que vous avez sur vos écrans et qui, une fois configurée, permet de contrôler vos appareils</p>
 
+            <h2 id="organisationsoftware" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#organisationsoftwareTxt" aria-expanded="false" role="button">Organisation du logiciel</h2>
+            <div class="collapse" id="organisationsoftwareTxt">
+                Le service Ianitor est une application développée par une entreprise qui utilise les services d'un tiers (Saashup avec des gens super compétents et sympas) pour sa mise en ligne</br>
+                <p>En quoi est-ce <strong>important</strong>?</p>
+                <p>
+                Simplement par ce que ce sont des professionnels du domaine qui gèrent la sécurité, la gestion des abonnements et s'assurent du bon déploiment de votre instance.<br>
+                Il reste que Ianitor est responsable du bon fonctionnement de son application et de sa sécurité interne.<br>
+                </p>
+                <p>
+                Dans votre proccessus d'inscription, vous aurez donc un compte chez saashup (avec une authentification par le biais d'un prestataire de confiance auth0) qui vous permet de faire votre gestion d'abonnements.
+                </br>
+                puis un autre compte dans votre instance de l'application Ianitor qui vous permettra de gérer vos portes et portails.
+                </p>
+            </div>
 
         </section>
-        <section id="useIanitor">
-            <h1 id="useIanitorH1">Utiliser Ianitor</h1>
-            <section id="saashupOrderingForMainAdmin">
-                <h1 id="saashupOrderingForMainAdminH1">Commander votre service Ianitor</h1>
-                <h2 id="saashupInscription">s'inscrire chez le prestataire Saashup</h2>
-            </section>
-            <section id="registerFirstTimeForMainAdmin">
-                <h1 id="registerfirsttimeH1">Premier accès à votre instance Ianitor</h1>
-                <p id="creationEntGestionnaire">
-            Une fois l'abonnement effectué, notre prestataire vous fournira rapidement le lien de votre instance de Ianitor. (Même si c'est rapide, il faut le temps de créer votre instance de l'application: caché dans le "cloud internet", il y a du matériel qui travaille)
-            Suivez ce lien (qui doit être du type <strong>TYPEAMETTRE</strong>)et vous tomberez sur une page de ce type:<br>
-            <div class="imgPadding">
-                <img width="100%" src="../images/ianitorInitialisation1bis.png"/>
-            </div>
-            L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
-            Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
-            indiquez le informations necessaires puis cliquez suivant</br>
-            </p>
-            <p id="creationEntreprisePrincipale"><br>
-                <div class="imgPadding">
-<div class="imgPadding">
-    <img width="100%" src="../images/ianitorInitialisation2.png"/>
-    </div>
-            entrez les informations concernant l'entreprise principale<br>
-            cliquez suivant<br>
-            </p>
-            <p id="creationUser">
-            entrez vos identifiants, veillez à être au moins administrateur.<br>
-<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation3.png"/>
-    </div>
-
-            cliquez suivant<br>
-            </p>
-            <p id="creationPortier">
-            creez le portier qui permettra d'ouvrir les portes.<br>
-            un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
-            
-<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation4.png"/>
-    </div>
-            cliquez suivant<br>
-            </p>
-            <p id="creationPorte">
-            nommez la premiere porte avec sa localisation.<br>
-<div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation5.png"/>
-    </div>
-            cliquez creer<br>
-            vous serez redirigé vers la page d'identifiants.
-            </p>
-            </section>
-            <section id="appUseForMainAdmin">
-                <p id="loginpage">
-            indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
-<div class="imgPadding"><img width="100%" src="../images/ianitorLoginPage.png"/>
-    </div>
-            </p>
-            <p id="pageAccueil1">
-                sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
-                Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
-                <div class="imgPadding">
-                <img width="100%" src="../images/ianitor1erePage.png"/></div>
-
-                cliquez sur "administration" puis "config portes"
-            </p>
-
-            <p id="pageConfigPortes">
-                <h2 id="configPortesH2">Configuration des portes</h2>
-                <p id="configPortesAvertissement">
-                    <h2 style="color:red">Avertissement</h2>
-                    Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
-                </p>
-                <p id="configPortier">
+        <section id="useIanitor" class="mt-4">
+            <h1 id="useIanitorH1" data-bs-toggle="collapse"  data-bs-target="#useIanitorTxt" aria-expanded="false" aria-controls="useIanitorTxt" role="button">Utiliser Ianitor</h1>
+            <div class="collapse" id="useIanitorTxt">
+                <section id="saashupOrderingForMainAdmin">
+                    <h2 id="saashupOrderingForMainAdminH1" class="ms-2">Commander votre service Ianitor</h2>
+                    <h2 id="saashupInscription" class="ms-2">s'inscrire chez le prestataire Saashup</h2>
+                </section>
+                <section id="registerFirstTimeForMainAdmin">
+                <h2 id="registerfirsttimeH2"  class="ms-2" data-bs-toggle="collapse"  data-bs-target="#registerfirsttimeH2Txt" aria-expanded="false" role="button">Premier accès à votre instance Ianitor</h1>
+                    <div class="collapse" id="registerfirsttimeH2Txt">
+                        <p id="creationEntGestionnaire">
+                    Une fois l'abonnement effectué, notre prestataire vous fournira rapidement le lien de votre instance de Ianitor. (Même si c'est rapide, il faut le temps de créer votre instance de l'application: caché dans le "cloud internet", il y a du matériel qui travaille)
+                    Suivez ce lien (qui doit être du type <strong>TYPEAMETTRE</strong>)et vous tomberez sur une page de ce type:<br>
                     <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorConfigPortes1.png"/>
-                    </div>  
-                    Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
-                    Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
-                    Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
-                    <div class="imgPadding">
-                    <img width="50%" src="../images/ianitorConfigPorteLoginHotePwd-Portier.png"/>
+                        <img width="100%" src="../images/ianitorInitialisation1bis.png" onclick="toMainPicGallery('../images/ianitorInitialisation1bis.png')"/>
                     </div>
-
-                    <p>
-                        une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a> des identifiants de votre wifi et de votre instance iantior.
-                    </p>
-                    <p id="confLed">
-                        <h3 id="confLedH3">Configuration de la led</h3>
-                        ayez le portier à vos côtés pour vérifier l'allumage de la led.<br>
-                        sur la page "administration/config. portes", cliquez sur éditer le portier,<br>
-                        Suivant le type de portier que vous avez, préférez tester les "gpio" 2, 5, 17, 23.<br>
-                        Quand au clique de "test", la led s'allume puis s'éteint. Ceci signifie que le gpio adéquate est trouvé.<br>
-                        vous pouvez alors "mettre à jour la led du portier".<br>
-                    </p>
-                    <p id="confRelaisInverses">
-                        <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
-                        Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
+                    L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
+                    Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
+                    indiquez le informations necessaires puis cliquez suivant</br>
+                        </p>
+                        <p id="creationEntreprisePrincipale"><br>
+                            <!-- <div class="imgPadding"> -->
                         <div class="imgPadding">
-                            <img width="100%" src="../images/relais 5vMonoFleches.jpg">
+                            <img width="100%" src="../images/ianitorInitialisation2.png" onclick="toMainPicGallery('../images/ianitorInitialisation2.png')"/>
+                            </div>
+                        entrez les informations concernant l'entreprise principale<br>
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationUser">
+                        entrez vos identifiants, veillez à être au moins administrateur.<br>
+                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation3.png" onclick="toMainPicGallery('../images/ianitorInitialisation3.png')"/>
+                                </div>
+
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationPortier">
+                        creez le portier qui permettra d'ouvrir les portes.<br>
+                        un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
+                        
+                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation4.png" onclick="toMainPicGallery('../images/ianitorInitialisation4.png')"/>
+                                </div>
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationPorte">
+                        nommez la premiere porte avec sa localisation.<br>
+                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation5.png" onclick="toMainPicGallery('../images/ianitorInitialisation5.png')"/>
+                                </div>
+                        cliquez creer<br>
+                        vous serez redirigé vers la page d'identifiants.
+                        </p>
+                    </div>
+                </section>
+                <section id="appUseForMainAdmin">
+                    <h2 id="appUseForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#appUseForMainAdminH2Txt" aria-expanded="false" aria-controls="appUseForMainAdminH2Txt" role="button">Utilisation de l'application</h2>
+                    <div id="appUseForMainAdminH2Txt" class="collapse">
+                        <p id="loginpage">
+                            indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
+                            <div class="imgPadding"><img width="100%" src="../images/ianitorLoginPage.png" onclick="toMainPicGallery('../images/ianitorLoginPage.png')"/>
+                                </div>
+                        </p>
+                        <p id="pageAccueil1">
+                            sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
+                            Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
+                            <div class="imgPadding">
+                            <img width="100%" src="../images/ianitor1erePage.png" onclick="toMainPicGallery('../images/ianitor1erePage.png')"/></div>
+
+                            cliquez sur "administration" puis "config portes"
+                        </p>
+
+                        <p id="pageConfigPortes">
+                            <h2 id="configPortesH2">Configuration des portes</h2>
+                            <p id="configPortesAvertissement">
+                                <h2 style="color:red">Avertissement</h2>
+                                Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
+                            </p>
+                            <p id="configPortier">
+                                <div class="imgPadding">
+                                    <img width="100%" src="../images/ianitorConfigPortes1.png"/>
+                                </div>  
+                                Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
+                                Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
+                                Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
+                                <div class="imgPadding">
+                                <img width="50%" src="../images/ianitorConfigPorteLoginHotePwd-Portier.png" onclick="toMainPicGallery('../images/ianitorConfigPorteLoginHotePwd-Portier.png')"/>
+                                </div>
+
+                                <p>
+                                    une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a> des identifiants de votre wifi et de votre instance iantior.
+                                </p>
+                                <p id="confLed">
+                                    <h3 id="confLedH3">Configuration de la led</h3>
+                                    ayez le portier à vos côtés pour vérifier l'allumage de la led.<br>
+                                    sur la page "administration/config. portes", cliquez sur éditer le portier,<br>
+                                    Suivant le type de portier que vous avez, préférez tester les "gpio" 2, 5, 17, 23.<br>
+                                    Quand au clique de "test", la led s'allume puis s'éteint. Ceci signifie que le gpio adéquate est trouvé.<br>
+                                    vous pouvez alors "mettre à jour la led du portier".<br>
+                                </p>
+                                <p id="confRelaisInverses">
+                                    <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
+                                    Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
+                                    <div class="imgPadding">
+                                        <img width="100%" src="../images/relais 5vMonoFleches.jpg" onclick="toMainPicGallery('../images/relais 5vMonoFleches.jpg')">
+                                    </div>
+                                    A sa mise en tension, il va se mettre dans sa position normale.<br>
+                                    Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
+                                    Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
+                                    Toutefois, après avoir cliqué sur "editer le portier", vous pouvez choisir d'inverser l'état du relais en cliquant sur "relais inversé".<br>
+                                    Si le fond devient vert, alors, le changement est enregistré.<br>
+                                </p>
+                            </p>
+                            <p id="configPorte">
+                                <h2 id="configPorteH2">Configuration d'une porte</h2>
+                                <p id="configPorteSummary">
+                                    vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
+                                    <div class="imgPadding">
+                                        <img width="100%" src="../images/ianitorConfigPortes1.png" onclick="toMainPicGallery('../images/ianitorConfigPortes1.png')"/><br>
+                                    </div>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPortes2.png" onclick="toMainPicGallery('../images/ianitorConfigPortes2.png')"/>
+                                    </div>
+                                    Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
+                                    L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPorteImage.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')"/>
+                                    </div>
+                                    <div class="imgPadding">
+                                        <img width="100%" src="../images/ianitorAccueilImageDisabled.png" onclick="toMainPicGallery('../images/ianitorAccueilImageDisabled.png')"/>
+                                    </div>
+                                    </br>
+
+                                    De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPorteGpio.png" onclick="toMainPicGallery('../images/ianitorConfigPorteGpio.png')"/>
+                                    </div>
+
+                                </p>
+                            </p>
+                        </p>
+                    </div>
+                </section>
+                <section id="configPortiersSoftware">
+                    <h2 id="configPortierSoftwareH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#configPortierSoftwareH2Txt" aria-expanded="false" role="button">Configuration logicielle des portiers (les appareils -esp32- avec les relais) </h2>
+                    <div id="configPortierSoftwareH2Txt" class="collapse">
+                        Quand la led de l'appareil clignote* au rythme d'1/2 seconde/seconde, vous pouvez vous connecter à son reseau (nom: Portier Ianitor).<br>
+                        Vous avez x secondes avant qu'il essaie de se connecter à un réseau et donc arreter le sien pendant ce temps.<br>
+                        une fois connecté au réseau wifi du portier, allez sur un navigateur et entrez l'adresse <strong>http://192.168.4.1</strong>
+                        sur cette page,
+                        indiquez le nom du wifi et son mot de passe ainsi que le hostname, login et mot de passe du portier.<br>
+                        Validez.<br>
+                        Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
+                        S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
+                        <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
+                    </div>
+                </section>
+                <section id="configPortiersIanitors">
+                    <h2 id="configPortierHardwareH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#materielIanitor" aria-expanded="false" role="button">Configuration matérielle des portiers</h2>
+
+                    <div class="collapse" id="materielIanitor">
+                        <h2>les portiers</h2>
+                        <ul id="portiersExistants">
+                            <li>module esp32 Wroom + relais</li>
+                            <li>module wt32 + relais</li>
+                            <li>carte esp32 avec relais inclus</li>
+                        </ul>
+                        <div id="esp32PlusRelais">
+                            <p>
+                                esp 32 testé:
+                                https://www.amazon.fr/gp/product/B09ZDHNW9L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                                (encore non testé) https://fr.aliexpress.com/item/4000296658456.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+
+                            </p>
+                            <p>
+                                relais testé:
+                                https://www.amazon.fr/gp/product/B07MY2R2ML/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                            </p>
+                            <p>
+                                Branchements usb.
+                            </p>
+                            <p>
+                                upload firmware et fichiers littleFS
+
+                                <h4 id="esp32Wroom32Uparlinux">
+                                    esp32 Wroom 32U parlinux
+                                </h4>
+                                python3 /home/*USER*/.arduino15/packages/esp32/tools/esptool_py/4.2.1/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bootloader.bin 0x8000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.partitions.bin 0xe000 /home/*USER*/.arduino15/packages/esp32/hardware/esp32/2.0.5/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bin 
+
+                            </p>
+                            <p>
+                                Branchements relais
+                                http://tiptopboards.free.fr/arduino_forum/viewtopic.php?f=2&t=33
+                                https://arduino-france.site/module-relais/
+                            </p>
+                            <p>
+                                tests
+                            </p>
                         </div>
-                        A sa mise en tension, il va se mettre dans sa position normale.<br>
-                        Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
-                        Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
-                        Toutefois, après avoir cliqué sur "editer le portier", vous pouvez choisir d'inverser l'état du relais en cliquant sur "relais inversé".<br>
-                        Si le fond devient vert, alors, le changement est enregistré.<br>
-                    </p>
-                </p>
-                <p id="configPorte">
-                    <h2 id="configPorteH2">Configuration d'un porte</h2>
-                    <p id="configPorteSummary">
-                        vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
+                        <div id="WT32PlusRelais">
+                            <p>
+                                esp 32 testé:<br>
+                                https://fr.aliexpress.com/item/1005004621301847.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+                            </p>
+                            <p>
+                                relais testé:
+                            </p>
+                            <p>
+                                Branchements upload
+                            </p>
+                            <p>
+                                upload firmware et fichiers littleFS
+                            </p>
+                            <p>
+                                Branchements relais
+                            </p>
+                            <p>
+                                tests
+                            </p>
+                        </div>
+                        <div id="carteEsp32WithRelais">
+                            <p>
+                                esp 32 testé:<br>
+                                https://fr.aliexpress.com/item/1005001908732109.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra avec l'option "ESP32-WROOM edition"
+                            </p>
+                            <p>
+                                relais testé:
+                            </p>
+                            <p>
+                                Branchements upload
+                            </p>
+                            <p>
+                                upload firmware et fichiers littleFS
+                            </p>
+                            <p>
+                                Branchements relais
+                            </p>
+                            <p>
+                                tests
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="confiNewEnt">
+                    <h2 id="confiNewEntH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#confiNewEntH2Txt" aria-expanded="false" role="button">Création nouvelle entreprise</h2>
+
+                    <div class="collapse" id="confiNewEntH2Txt">
+                        Allez dans "administration/infos generales".<br>
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorConfigPortes1.png"/><br>
+                            <img width="100%" src="../images/ianitorAdminInfoGen.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')">
                         </div>
+                        cliquez "nouvelle entreprise"<br>
+                        remplissez les champs<br>
                         <div class="imgPadding">
-                            <img width="50%" src="../images/ianitorConfigPortes2.png"/>
+                            <img width="100%" src="../images/ianitorAdminNewEntRemplie.png"  onclick="toMainPicGallery('../images/ianitorAdminNewEntRemplie.png')" alt="">
                         </div>
-                        Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
-                        L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
+                        validez en cliquant "creer"<br>
+                        Pensez à creer l'administrateur qui gérera les identifiants des employés de l'entreprise.<br>
+                        Double cliquez sur le nom de l'entreprise ou choissisez dans le menu du haut l'entreprise souhaitée<br>
+                        Dans "administration/utilisateurs", cliquez sur "nouveau"<br>
+                        remplissez les champs en vous assurant que vous avez bien cliqué sur "administrateur" pour que ce compte puisse gèrer les fonctions disponibles à cette entreprise.
                         <div class="imgPadding">
-                            <img width="50%" src="../images/ianitorConfigPorteImage.png"/>
+                            <img width="100%" src="../images/ianitorAdminNewUserModalRemplie.png" onclick="toMainPicGallery('../images/ianitorAdminNewUserModalRemplie.png')" alt="">
                         </div>
+                        Cet utilisateur apparaitra dans "administration/utilisateurs" et pourra alors gèrer les comptes de son entreprise.<br>
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorAccueilImageDisabled.png"/>
+                            <img width="100%" src="../images/ianitorAdminUsers1erUser.png" onclick="toMainPicGallery('../images/ianitorAdminUsers1erUser.png')" alt="">
                         </div>
-                        </br>
-
-                        De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
+                    </div>
+                </section>
+                <section id="changePlaque" class="d-none">
+                    <h2 id="changePlaqueH2" class="ms-2" data-bs-toggle="collapse" data-bs-target="#changePlaqueH2Txt" aria-expanded="false" role="button">modifier/ajouter une plaque d'immatriculation</h2>
+                    <div class="changePlaqueH2Txt">
+                        TODO
                         <div class="imgPadding">
-                            <img width="50%" src="../images/ianitorConfigPorteGpio.png"/>
+                            <img width="100%" src="../images/ianitor1erePageChgtPlaqueComm.png" onclick="toMainPicGallery('../images/ianitor1erePageChgtPlaqueComm.png')"/>
                         </div>
-
-                    </p>
-                </p>
-            </p>
-            </section>
-            <section id="configPortiersSoftware">
-                <h2 id="configPortierSoftwareH2">Configuration logicielle des portiers (les appareils -esp32- avec les relais) </h2>
-
-                Quand la led de l'appareil clignote* au rythme d'1/2 seconde/seconde, vous pouvez vous connecter à son reseau (nom: Portier Ianitor).<br>
-                Vous avez x secondes avant qu'il essaie de se connecter à un réseau et donc arreter le sien pendant ce temps.<br>
-                une fois connecté au réseau wifi du portier, allez sur un navigateur et entrez l'adresse <strong>http://192.168.4.1</strong>
-                sur cette page,
-                indiquez le nom du wifi et son mot de passe ainsi que le hostname, login et mot de passe du portier.<br>
-                Validez.<br>
-                Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
-                S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
-                <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
-            </section>
-            <section id="configPortiersIanitors">
-                <h2 id="configPortierHardwareH2">Configuration matérielle des portiers</h2>
-
-                <p id="materielIanitor">
-                    <h2>les portiers</h2>
-                    <ul id="portiersExistants">
-                        <li>module esp32 Wroom + relais</li>
-                        <li>module wt32 + relais</li>
-                        <li>carte esp32 avec relais inclus</li>
-                    </ul>
-                    <div id="esp32PlusRelais">
-                        <p>
-                            esp 32 testé:
-                            https://www.amazon.fr/gp/product/B09ZDHNW9L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
-                            (encore non testé) https://fr.aliexpress.com/item/4000296658456.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
-
-                        </p>
-                        <p>
-                            relais testé:
-                            https://www.amazon.fr/gp/product/B07MY2R2ML/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
-                        </p>
-                        <p>
-                            Branchements usb.
-                        </p>
-                        <p>
-                            upload firmware et fichiers littleFS
-
-                            <h4 id="esp32Wroom32Uparlinux">
-                                esp32 Wroom 32U parlinux
-                            </h4>
-                            python3 /home/*USER*/.arduino15/packages/esp32/tools/esptool_py/4.2.1/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bootloader.bin 0x8000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.partitions.bin 0xe000 /home/*USER*/.arduino15/packages/esp32/hardware/esp32/2.0.5/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bin 
-
-                        </p>
-                        <p>
-                            Branchements relais
-                            http://tiptopboards.free.fr/arduino_forum/viewtopic.php?f=2&t=33
-                            https://arduino-france.site/module-relais/
-                        </p>
-                        <p>
-                            tests
-                        </p>
                     </div>
-                    <div id="WT32PlusRelais">
-                        <p>
-                            esp 32 testé:<br>
-                            https://fr.aliexpress.com/item/1005004621301847.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
-                        </p>
-                        <p>
-                            relais testé:
-                        </p>
-                        <p>
-                            Branchements upload
-                        </p>
-                        <p>
-                            upload firmware et fichiers littleFS
-                        </p>
-                        <p>
-                            Branchements relais
-                        </p>
-                        <p>
-                            tests
-                        </p>
-                    </div>
-                    <div id="carteEsp32WithRelais">
-                        <p>
-                            esp 32 testé:<br>
-                            https://fr.aliexpress.com/item/1005001908732109.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra avec l'option "ESP32-WROOM edition"
-                        </p>
-                        <p>
-                            relais testé:
-                        </p>
-                        <p>
-                            Branchements upload
-                        </p>
-                        <p>
-                            upload firmware et fichiers littleFS
-                        </p>
-                        <p>
-                            Branchements relais
-                        </p>
-                        <p>
-                            tests
-                        </p>
-                    </div>
-                </p>
-            </section>
-            <section id="confiNewEnt">
-                <h2 id="confiNewEntH2">Création nouvelle entreprise</h2>
-
-                <p id="creation nouvelle entreprise">
-                    Alez dans "administration/infos generales".<br>
-                    <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorAdminInfoGen.png">
-                    </div>
-                    cliquez "nouvelle entreprise"<br>
-                    remplissez les champs<br>
-                    <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorAdminNewEntRemplie.png" alt="">
-                    </div>
-                    validez en cliquant "creer"<br>
-                    Pensez à creer l'administrateur qui gérera les identifiants des employés de l'entreprise.<br>
-                    Double cliquez sur le nom de l'entreprise ou choissisez dans le menu du haut l'entreprise souhaitée<br>
-                    Dans "administration/utilisateurs", cliquez sur "nouveau"<br>
-                    remplissez les champs en vous assurant que vous avez bien cliqué sur "administrateur" pour que ce compte puisse gèrer les fonctions disponibles à cette entreprise.
-                    <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorAdminNewUserModalRemplie.png" alt="">
-                    </div>
-                    Cet utilisateur apparaitra dans "administration/utilisateurs" et pourra alors gèrer les comptes de son entreprise.<br>
-                    <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorAdminUsers1erUser.png" alt="">
-                    </div>
-                </p>
-            </section>
-            <div class="imgPadding">
-                <img width="100%" src="../images/ianitor1erePageChgtPlaqueComm.png"/>
+                </section>
             </div>
         </section>
 
-        <section id="definitions">
-            <h1 id="definitionsH1">Définitions</h1>
-            <div id="applicationPdiv">
-                <h5>application</h5>
-                <figure class="text-center">
-                <blockquote class="blockquote">
-                    <p id="applicationP">
+        <section id="definitions" class="mt-4">
+            <h1 id="definitionsH1" data-bs-toggle="collapse"  data-bs-target=".multi-collapseDef" aria-expanded="false" aria-controls="application instance portierIanitor relaisAction" role="button">Définitions</h1>
+            <div id="applicationPdiv"  class="collapse multi-collapseDef" >
+                <h5 class="ms-2" id="application" data-bs-toggle="collapse"  data-bs-target="#applicationP" aria-expanded="false" role="button">application</h5>
+               
+                    <p id="applicationP" class="collapse">
                         est, dans le domaine informatique, un programme (ou un ensemble logiciel) directement utilisé pour réaliser une tâche, ou un ensemble de tâches élémentaires d'un même domaine ou formant un tout
                 
                         Typiquement, un éditeur de texte, un navigateur web, un lecteur multimédia, un jeu vidéo, sont des applications. Les applications s'exécutent en utilisant les services du système d'exploitation pour utiliser les ressources matérielles. 
+                        <cite >
+                            <a href="https://fr.wikipedia.org/wiki/Application_(informatique)">Application_(informatique) - wikipedia</a>
+                        </cite>
                     </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                    <a href="https://fr.wikipedia.org/wiki/Application_(informatique)">Application_(informatique) - wikipedia</a>
-                </figcaption>
-                </figure>
+               
+               
             </div>
-            <div id="instancePdiv">
-                <h5>Instance</h5>
-                <p id="instanceP">
+            <div id="instancePdiv" class="collapse multi-collapseDef">
+                <h5 class="ms-2" id="instance" data-bs-toggle="collapse"  data-bs-target="#instanceP" aria-expanded="false" role="button" >Instance</h5>
+                <p id="instanceP" class="collapse">
                     est une entité de l'application informatique:<br>
                     l'application est le programme en code informatique, l'instance vous permet de l'utiliser et elle vous appartient.
                 </p>
             </div>
-            <div id="portierPdiv">
-                <h5>portier (ianitor)</h5>
-                <p id="portierP">
+            <div id="portierPdiv" class="collapse multi-collapseDef">
+                <h5 class="ms-2" id="portierIanitor" data-bs-toggle="collapse"  data-bs-target="#portierP" aria-expanded="false" role="button">portier (ianitor)</h5>
+                <p id="portierP" class="collapse">
                     dans cette application, il est un appareil qui permet de déclencher l'ouverture des portes.<br>
                     un portier Ianitor est un appareil electronique avec un ESP32 Wroom.
                 </p>
             </div>
-            <div id="tpsActionRelaisPdiv">
-                <h5>temps d'action du relais</h5>
-                <p id="tpsActionRelaisP">
+            <div id="tpsActionRelaisPdiv" class="collapse multi-collapseDef">
+                <h5 class="ms-2" id="relaisAction" data-bs-toggle="collapse"  data-bs-target="#tpsActionRelaisP" aria-expanded="false" role="button">temps d'action du relais</h5>
+                <p id="tpsActionRelaisP" class="collapse">
                     est le temps de changement d'état du relais par rapport à sa position de repos lorsqu'une demande d'ouverture est demandée.
                 </p>
         </div>
@@ -426,6 +556,12 @@
 </div>
     </body>
     <script>
+
+        function toMainPicGallery(_src)
+        {
+            $("#mainPicGallery").prop("src", _src);
+            $("#imgGallery").modal("show");
+        }
         function changeImageSrc()
         {
             for(let thisImg of document.getElementsByTagName("img"))
@@ -435,10 +571,34 @@
             }
             //document.getElementById("imageid").src="../template/save.png";
         }
+
+        function updateMenu()
+        {
+            $('#scroll-menu').sdScrollMenu({
+                    width: 250, // integer: in px
+                    scrollDuration: 500, // integer: in ms
+                    titles: 'h1, h2, h3, h4, h5, h6', // string: jQuery selectors
+                    highlightDuration: 1000, // integer: in ms
+                    highlightColor: '#a19d38' // string: color
+                });
+        }
+
         document.addEventListener("DOMContentLoaded", function(event) { 
         //do work
             
             //changeImageSrc();
+        });
+
+        $(document).ready(function () {
+       
+
+            // buildMenu("#scroll-menu", {
+            //     width: 250, // integer: in px
+            //     scrollDuration: 500, // integer: in ms
+            //     titles: 'h1, h2, h3, h4, h5, h6', // string: jQuery selectors
+            //     highlightDuration: 1000, // integer: in ms
+            //     highlightColor: '#a19d38' // string: color
+            // })
         });
     </script>
 </html>
