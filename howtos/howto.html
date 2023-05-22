@@ -23,7 +23,8 @@
             rel="stylesheet" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js">
         </script>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous" referrerpolicy="no-referrer">
         <script src="/plugin/jquery.sdBootStrapMenu.js">
         </script>
         <meta name="color-scheme" content="dark light">
@@ -107,6 +108,42 @@
         </style>
     </head>
     <body>
+        <nav class="navbar navbar-expand-md nav-color mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="padding: 0 0 0 0;" href="https://ianitordoorkeeper.com"><img id="navbar-img" src="https://doc.ianitordoorkeeper.com/images/logoIanitorV7.png" height="48px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/" id="nav-home-btn"><i class="fas fa-home"></i>
+                                <span id="navHome">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/saas" id="nav-config-btn"><i class="fas fa-money-check-alt"></i> <span id="navApp">MySaas</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/admin" id="nav-admin-btn"><i class="fas fa-tools"></i> <span id="navAdmin">Admin</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://doc.ianitordoorkeeper.com" id="nav-doc-btn" target="_blank"><i class="fas fa-file-alt"></i> <span id="navDoc">Docs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://status.ianitordoorkeeper.com" id="nav-status-btn" target="_blank"><i class="fas fa-battery-full"></i> <span id="navStatus">Status</span></a>
+                        </li>
+                    </ul>
+                    <!-- <div class="d-flex mx-2">
+                        <button class="btn btn-outline-danger" onclick="logout();">logout</button>
+                    </div> -->
+                    <div class="d-flex">
+                        <img id="avatar" class="rounded-circle" width="36px" height="36px" src="https://s.gravatar.com/avatar/aa62783cad46d2178c0ba4e688669dec?s=480&amp;r=pg&amp;d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fia.png" onclick="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- </nav>
         <div class="row border-bottom  mb-3">
             <nav id="navbar-admin" class="py-0 navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -127,23 +164,21 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul id="ulMenu" class="navbar-nav  me-auto mb-2 mb-lg-0">
-                            <li class="nav-item text-truncate">
-                                <a id="profileHome" class="nav-link active" aria-current="page" data-bs-toggle="collapse"
-                                    data-bs-target=".navbar-collapse.show"
-                                    onClick="setActiveMenu(this); setActivePage('ouvertureTab')"><i
-                                        class="bi bi-door-open-fill"></i> <span trad="ouvertureTab">Home</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/" id="nav-home-btn"><i class="fas fa-home"></i>
+                                    <span id="navHome">Home</span></a>
                             </li>
-
-                            <li class="nav-item text-truncate" data-toggle="collapse">
-                                <a id="profileAdministration" class="nav-link d-none" data-bs-toggle="collapse"
-                                    data-bs-target=".navbar-collapse.show"
-                                    onClick="setActiveMenu(this); setActivePage('administrationTab')"><i
-                                        class="bi bi-sliders"></i> <span trad="administration">administration</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/saas" id="nav-config-btn"><i class="fas fa-money-check-alt"></i> <span id="navApp">MySaas</span></a>
                             </li>
-                            <li class="nav-item text-truncate d-none">
-                                <a id="profileOldAdministration" class="nav-link" data-bs-toggle="collapse"
-                                    data-bs-target=".navbar-collapse.show"
-                                    onClick="setActiveMenu(this); setActivePage('oldAdministrationTab')" trad="old">old</a>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/admin" id="nav-admin-btn"><i class="fas fa-tools"></i> <span id="navAdmin">Admin</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="https://doc.ianitordoorkeeper.com" id="nav-doc-btn" target="_blank"><i class="fas fa-file-alt"></i> <span id="navDoc">Docs</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="https://status.ianitordoorkeeper.com" id="nav-status-btn" target="_blank"><i class="fas fa-battery-full"></i> <span id="navStatus">Status</span></a>
                             </li>
                         </ul>
                     
@@ -172,11 +207,11 @@
                             </li>
                         </ul>
                         </li>
-                        </ul> -->
+                        </ul> -- >
                     </div>
                 </div>
             </nav>
-        </div>
+        </div> -->
         <!-- <div class="full-width"> -->
         <div class="container row">
             <div class="modal fade" id="imgGallery" style="font-family: 'Roboto' , sans-serif;">
@@ -186,7 +221,7 @@
                             <div class="modal-title" trad="newEnt">gallerie</div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body d-flex justify-content-center">
                             <img class="img-fluid" id="mainPicGallery" src="">
                         </div>
 
@@ -204,37 +239,40 @@
                 <div id="scroll-menu" class="">
 
         <section id="whatisianitorForMainAdmin">
-            <h1 id="whatisianitorForMainAdminH1" data-bs-toggle="collapse"  data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="serviceComposition hardwarePartShort softwarePartShort organisationsoftware" role="button">Qu'est-ce que Ianitor</h1>
-            Ianitor est un service de gestion de portes et portail à distance.<br>
-            <h2 id="serviceComposition" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#serviceCompositionTxt" data-bs-target="#serviceCompositionTxt" aria-expanded="false" aria-controls="serviceCompositionTxt" role="button">Composition de Ianitor </h2>
-            <p class="collapse" id="serviceCompositionTxt">
-                Le service Iantor est composé d'une partie <strong> logicielle</strong> (celle visible sur votre ecran) et une partie <strong> "hardware"</strong>.<br>
-            </p>
-            <h3 id="hardwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#hardwarePartShortTxt" aria-expanded="false" role="button">La partie hardware</h3>
-            <div class="collapse" id="hardwarePartShortTxt">
-                <p>c'est un petit boitier qui permet de simuler l'appui sur un bouton.<br>
-                    En connectant ce boitier à un appareil, il est possible de le controler.<br>
-                    Ainsi, vous pouvez ouvrir un portail, une porte, baisser des rideaux, allumer une lumière...</p>
-                <p>Pour ceux qui n'ont pas accès à l'appareil mais qui ont une télécommande et qui sont filous, nous dédions le paragraphe "pirate box"</p>
-            </div>
-            <h3 id="softwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#softwarePartShortTxt" aria-expanded="false" role="button">La partie logicielle</h3>
-            <p class="collapse" id="softwarePartShortTxt">C'est celle que vous avez sur vos écrans et qui, une fois configurée, permet de contrôler vos appareils</p>
-
-            <h2 id="organisationsoftware" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#organisationsoftwareTxt" aria-expanded="false" role="button">Organisation du logiciel</h2>
-            <div class="collapse" id="organisationsoftwareTxt">
-                Le service Ianitor est une application développée par une entreprise qui utilise les services d'un tiers (Saashup avec des gens super compétents et sympas) pour sa mise en ligne</br>
-                <p>En quoi est-ce <strong>important</strong>?</p>
-                <p>
-                Simplement par ce que ce sont des professionnels du domaine qui gèrent la sécurité, la gestion des abonnements et s'assurent du bon déploiment de votre instance.<br>
-                Il reste que Ianitor est responsable du bon fonctionnement de son application et de sa sécurité interne.<br>
+            <h1 id="whatisianitorForMainAdminH1" data-bs-toggle="collapse"  data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="serviceComposition hardwarePartShort softwarePartShort organisationsoftware whatisianitorForMainAdminH1Txt whatisianitorForMainAdminH1shortTxt" role="button">Qu'est-ce que Ianitor</h1>
+            <div id="whatisianitorForMainAdminH1Txt" class="collapse multi-collapse">
+                <p id="whatisianitorForMainAdminH1shortTxt" class="collapse multi-collapse">
+                    Ianitor est un service de gestion de portes et portail à distance.
                 </p>
-                <p>
-                Dans votre processus d'inscription, vous aurez donc un compte chez saashup (avec une authentification par le biais d'un prestataire de confiance auth0) qui vous permet de faire votre gestion d'abonnements.
-                </br>
-                puis un autre compte dans votre instance de l'application Ianitor qui vous permettra de gérer vos portes et portails.
+                <h2 id="serviceComposition" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#serviceCompositionTxt" data-bs-target="#serviceCompositionTxt" aria-expanded="false" aria-controls="serviceCompositionTxt" role="button">Composition de Ianitor </h2>
+                <p class="collapse" id="serviceCompositionTxt">
+                    Le service Iantor est composé d'une partie <strong> logicielle</strong> (celle visible sur votre ecran) et une partie <strong> "hardware"</strong>.<br>
                 </p>
-            </div>
+                <h3 id="hardwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#hardwarePartShortTxt" aria-expanded="false" role="button">La partie hardware</h3>
+                <div class="collapse" id="hardwarePartShortTxt">
+                    <p>c'est un petit boitier qui permet de simuler l'appui sur un bouton.<br>
+                        En connectant ce boitier à un appareil, il est possible de le controler.<br>
+                        Ainsi, vous pouvez ouvrir un portail, une porte, baisser des rideaux, allumer une lumière...</p>
+                    <p>Pour ceux qui n'ont pas accès à l'appareil mais qui ont une télécommande et qui sont filous, nous dédions le paragraphe "pirate box"</p>
+                </div>
+                <h3 id="softwarePartShort" class="collapse multi-collapse ms-4" data-bs-toggle="collapse"  data-bs-target="#softwarePartShortTxt" aria-expanded="false" role="button">La partie logicielle</h3>
+                <p class="collapse" id="softwarePartShortTxt">C'est celle que vous avez sur vos écrans et qui, une fois configurée, permet de contrôler vos appareils</p>
 
+                <h2 id="organisationsoftware" class="collapse multi-collapse ms-2" data-bs-toggle="collapse"  data-bs-target="#organisationsoftwareTxt" aria-expanded="false" role="button">Organisation du logiciel</h2>
+                <div class="collapse" id="organisationsoftwareTxt">
+                    Le service Ianitor est une application développée par une entreprise qui utilise les services d'un tiers (Saashup avec des gens super compétents et sympas) pour sa mise en ligne</br>
+                    <p>En quoi est-ce <strong>important</strong>?</p>
+                    <p>
+                    Simplement par ce que ce sont des professionnels du domaine qui gèrent la sécurité, la gestion des abonnements et s'assurent du bon déploiment de votre instance.<br>
+                    Il reste que Ianitor est responsable du bon fonctionnement de son application et de sa sécurité interne.<br>
+                    </p>
+                    <p>
+                    Dans votre processus d'inscription, vous aurez donc un compte chez saashup (avec une authentification par le biais d'un prestataire de confiance auth0) qui vous permet de faire votre gestion d'abonnements.
+                    </br>
+                    puis un autre compte dans votre instance de l'application Ianitor qui vous permettra de gérer vos portes et portails.
+                    </p>
+                </div>
+            </div>
         </section>
         <section id="useIanitor" class="mt-4">
             <h1 id="useIanitorH1" data-bs-toggle="collapse"  data-bs-target="#useIanitorTxt" aria-expanded="false" aria-controls="useIanitorTxt" role="button">Utiliser Ianitor</h1>
@@ -376,105 +414,162 @@
                         </p>
                     </div>
                 </section>
-                <section id="configPortiersSoftware">
-                    <h2 id="configPortierSoftwareH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#configPortierSoftwareH2Txt" aria-expanded="false" role="button">Configuration logicielle des portiers (les appareils -esp32- avec les relais) </h2>
-                    <div id="configPortierSoftwareH2Txt" class="collapse">
-                        Quand la led de l'appareil clignote* au rythme d'1/2 seconde/seconde, vous pouvez vous connecter à son reseau (nom: Portier Ianitor).<br>
-                        Vous avez x secondes avant qu'il essaie de se connecter à un réseau et donc arreter le sien pendant ce temps.<br>
-                        une fois connecté au réseau wifi du portier, allez sur un navigateur et entrez l'adresse <strong>http://192.168.4.1</strong>
-                        sur cette page,
-                        indiquez le nom du wifi et son mot de passe ainsi que le hostname, login et mot de passe du portier.<br>
-                        Validez.<br>
-                        Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
-                        S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
-                        <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
-                    </div>
-                </section>
-                <section id="configPortiersIanitors">
-                    <h2 id="configPortierHardwareH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#materielIanitor" aria-expanded="false" role="button">Configuration matérielle des portiers</h2>
-
-                    <div class="collapse" id="materielIanitor">
-                        <h2>les portiers</h2>
-                        <ul id="portiersExistants">
-                            <li>module esp32 Wroom + relais</li>
-                            <li>module wt32 + relais</li>
-                            <li>carte esp32 avec relais inclus</li>
-                        </ul>
-                        <div id="esp32PlusRelais">
-                            <p>
-                                esp 32 testé:
-                                https://www.amazon.fr/gp/product/B09ZDHNW9L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
-                                (encore non testé) https://fr.aliexpress.com/item/4000296658456.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
-
-                            </p>
-                            <p>
-                                relais testé:
-                                https://www.amazon.fr/gp/product/B07MY2R2ML/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
-                            </p>
-                            <p>
-                                Branchements usb.
-                            </p>
-                            <p>
-                                upload firmware et fichiers littleFS
-
-                                <h4 id="esp32Wroom32Uparlinux">
-                                    esp32 Wroom 32U parlinux
-                                </h4>
-                                python3 /home/*USER*/.arduino15/packages/esp32/tools/esptool_py/4.2.1/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bootloader.bin 0x8000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.partitions.bin 0xe000 /home/*USER*/.arduino15/packages/esp32/hardware/esp32/2.0.5/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bin 
-
-                            </p>
-                            <p>
-                                Branchements relais
-                                http://tiptopboards.free.fr/arduino_forum/viewtopic.php?f=2&t=33
-                                https://arduino-france.site/module-relais/
-                            </p>
-                            <p>
-                                tests
-                            </p>
+                <section id="portiersSection">
+                    <h2 id="portiersSectionH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target=".multiCollapsePortier" aria-expanded="false" role="button">Les portiers</h2>
+                    <section id="portiersChoice" class="collapse multiCollapsePortier">
+                        <h3 id="portiersChoiceH2" class="ms-4" data-bs-toggle="collapse"  data-bs-target="#portiersChoiceH2Txt" aria-expanded="false" role="button">Choisir son portier</h3>
+                        <div class="collapse" id="portiersChoiceH2Txt">
+                            <h5 data-bs-toggle="collapse"  data-bs-target="#multiCollapseListPortiers" aria-expanded="false" role="button">les portiers</h5>
+                                <!-- <ul id="portiersExistants">
+                                    <li>module esp32 Wroom + module de relais</li>
+                                    <li>module wt32 + module de relais</li>
+                                    <li>carte esp32 avec relais inclus</li>
+                                </ul> -->
+                            <div id="multiCollapseListPortiers" class="collapse">
+                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#esp32PlusRelais" aria-expanded="false" role="button">module esp32 Wroom + relais</h6>
+                                <div class="collapse" id="esp32PlusRelais">
+                                    <p>
+                                        esp 32 testé:
+                                        https://www.amazon.fr/gp/product/B09ZDHNW9L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                                        (encore non testé) https://fr.aliexpress.com/item/4000296658456.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+    
+                                    </p>
+                                    <p>
+                                        relais testé:
+                                        https://www.amazon.fr/gp/product/B07MY2R2ML/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+                                    </p>
+                                    <p>
+                                        Branchements usb.
+                                    </p>
+                                    <p>
+                                        upload firmware et fichiers littleFS
+    
+                                        <h4 id="esp32Wroom32Uparlinux">
+                                            esp32 Wroom 32U parlinux
+                                        </h4>
+                                        python3 /home/*USER*/.arduino15/packages/esp32/tools/esptool_py/4.2.1/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bootloader.bin 0x8000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.partitions.bin 0xe000 /home/*USER*/.arduino15/packages/esp32/hardware/esp32/2.0.5/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_33946/ianitordoorkeeperESP32.ino.bin 
+    
+                                    </p>
+                                    <p>
+                                        Branchements relais
+                                        http://tiptopboards.free.fr/arduino_forum/viewtopic.php?f=2&t=33
+                                        https://arduino-france.site/module-relais/
+                                    </p>
+                                    <p>
+                                        tests
+                                    </p>
+                                </div>
+                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#WT32PlusRelais" aria-expanded="false" role="button">module wt32 + relais</h6>
+                                <div class="collapse" id="WT32PlusRelais">
+                                    <p>
+                                        esp 32 testé:<br>
+                                        https://fr.aliexpress.com/item/1005004621301847.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
+                                    </p>
+                                    <p>
+                                        relais testé:
+                                    </p>
+                                    <p>
+                                        Branchements upload
+                                    </p>
+                                    <p>
+                                        upload firmware et fichiers littleFS
+                                    </p>
+                                    <p>
+                                        Branchements relais
+                                    </p>
+                                    <p>
+                                        tests
+                                    </p>
+                                </div>
+                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#carteEsp32WithRelais" aria-expanded="false" role="button">carte esp32 avec relais inclus</h6>
+                                <div class="collapse" id="carteEsp32WithRelais">
+                                    <p>
+                                        esp 32 testé:<br>
+                                        https://fr.aliexpress.com/item/1005001908732109.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra avec l'option "ESP32-WROOM edition"
+                                    </p>
+                                    <p>
+                                        relais testé:
+                                    </p>
+                                    <p>
+                                        Branchements upload
+                                    </p>
+                                    <p>
+                                        upload firmware et fichiers littleFS
+                                    </p>
+                                    <p>
+                                        Branchements relais
+                                    </p>
+                                    <p>
+                                        tests
+                                    </p>
+                                </div>
+                            </div>
+                            <h5 data-bs-toggle="collapse"  data-bs-target="#listRelais" aria-expanded="false" role="button">les modules de relais</h5>
+                            <div class="collapse" id="listRelais">
+                                <h6 data-bs-toggle="decollapse"  data-bs-target="#moduleRelaisImportantTxt" aria-expanded="false" role="button" style="color:red">important </h6>
+                                <div class="decollapse" id="moduleRelaisImportantTxt">
+                                    Actuellement, Le nombre de relais utilisable dépend du module esp32 que vous choissisez, notamment par rapport à vos besoin:<br>
+                                    <ul>
+                                        <li>un module esp32 devkit C pourra gèrer 8 relais</li>
+                                        <li>un module WT32 pourra en gèrer 4 au maximum</li>
+                                    </ul>
+                                </div>
+                                <h6 data-bs-toggle="collapse"  data-bs-target="#module2relaisTxt" aria-expanded="false" role="button">module 2 relais</h6>
+                                <div class="collapse" id="module2relaisTxt">TODO : photo 2 relais</div>
+                                <h6 data-bs-toggle="collapse"  data-bs-target="#module4relaisTxt" aria-expanded="false" role="button">module 4 relais</h6>
+                                <div class="collapse" id="module4relaisTxt">TODO : photo 4 relais</div>
+                                <h6 data-bs-toggle="collapse"  data-bs-target="#module8relaisTxt" aria-expanded="false" role="button">module 8 relais</h6>
+                                <div class="collapse" id="module8relaisTxt">TODO : photo 8 relais</div>
+                                
+                            </div>
                         </div>
-                        <div id="WT32PlusRelais">
-                            <p>
-                                esp 32 testé:<br>
-                                https://fr.aliexpress.com/item/1005004621301847.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra
-                            </p>
-                            <p>
-                                relais testé:
-                            </p>
-                            <p>
-                                Branchements upload
-                            </p>
-                            <p>
-                                upload firmware et fichiers littleFS
-                            </p>
-                            <p>
-                                Branchements relais
-                            </p>
-                            <p>
-                                tests
-                            </p>
+
+                    </section>
+                    <section id="configPortiersSoftware" class="collapse multiCollapsePortier">
+                        <h3 id="configPortierSoftwareH2" class="ms-4" data-bs-toggle="collapse"  data-bs-target="#configPortierSoftwareH2Txt" aria-expanded="false" role="button">Configuration logicielle des portiers (les appareils -esp32- avec les relais) </h3>
+                        <div id="configPortierSoftwareH2Txt" class="collapse">
+                            Quand la led de l'appareil clignote* au rythme d'1/2 seconde/seconde, vous pouvez vous connecter à son reseau (nom: Portier Ianitor).<br>
+                            Vous avez x secondes avant qu'il essaie de se connecter à un réseau et donc arreter le sien pendant ce temps.<br>
+                            une fois connecté au réseau wifi du portier, allez sur un navigateur et entrez l'adresse <strong>http://192.168.4.1</strong>
+                            sur cette page,
+                            indiquez le nom du wifi et son mot de passe ainsi que le hostname, login et mot de passe du portier.<br>
+                            Validez.<br>
+                            Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
+                            S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
+                            <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
                         </div>
-                        <div id="carteEsp32WithRelais">
-                            <p>
-                                esp 32 testé:<br>
-                                https://fr.aliexpress.com/item/1005001908732109.html?spm=a2g0o.order_list.0.0.21ef5e5bKKaUSj&gatewayAdapt=glo2fra avec l'option "ESP32-WROOM edition"
-                            </p>
-                            <p>
-                                relais testé:
-                            </p>
-                            <p>
-                                Branchements upload
-                            </p>
-                            <p>
-                                upload firmware et fichiers littleFS
-                            </p>
-                            <p>
-                                Branchements relais
-                            </p>
-                            <p>
-                                tests
-                            </p>
+                    </section>
+                    <section id="configPortiersIanitors" class="collapse multiCollapsePortier">
+                        <h3 id="configPortierHardwareH2" class="ms-4" data-bs-toggle="collapse"  data-bs-target="#configPortierHardwareH2Txt" aria-expanded="false" role="button">Configuration matérielle des portiers</h3>
+                        <div class="collapse" id="configPortierHardwareH2Txt">
+                            TODO
                         </div>
-                    </div>
+                        
+                    </section>
+                    <section id="configPortiersIanitors" class="collapse multiCollapsePortier">
+                        <h6 id="configPortierHardwareH2" class="ms-4" data-bs-toggle="collapse"  data-bs-target="#pirateBoxH2Txt" aria-expanded="false" role="button">pirate box</h6>
+                        <div class="collapse" id="pirateBoxH2Txt">
+                            <h7 class="ms-6" data-bs-toggle="collapse"  data-bs-target="#utiliserTelecommande" aria-expanded="false" role="button">Utilisez une télécommande!</h7><br>
+                            <div id="utiliserTelecommande" class="collapse">
+                                En soudant des fils aux bornes du bouton déclanchant l'action souhaitée, puis en reliant ces fils au relais du portier ianitor configuré pour ce relais, vous remplacez l'action de l'appui sur le bouton de la télécommande.<br>
+                                <p>
+                                    <strong style="color: red;">Attention</strong><br>
+                                    La télécommande fonctionne avec une pile, il sera necessaire de la changer.  vous n'avez pas d'indicateur par Ianitor de son état.<br>
+                                    La télécommande doit être située de manière adaptée par rapport à la entenne de reception du matériel à déclancher (souvent un portail ou porte de garage) pour pouvoir être fonctionnelle.<br>
+                                    Il est parfois necessaire de simuler un appui assez long.  Ceci est configurable dans la section "administration -> porte -> [choisir le portier] -> [choisir la porte] -> temps d'action du relais en milisecondes"<br>
+                                    Assurez-vous d'avoir l'accord du propriétaire ou du syndic des lieux: les références et les "mouvements" d'une télécommande sont connus et l'utilisation anormale d'une télécommande par un utilisateur peut entrainer un découplage de sa télécommande par le service d'entretien ou par demande du reponsable.
+                                </p>
+                            </div>
+                            <h7 class="ms-6" data-bs-toggle="collapse"  data-bs-target="#parWifiEtBatterie" aria-expanded="false" role="button">powerBank et wifi du téléphone</h7><br>
+                            <div id="parWifiEtBatterie" class="collapse">
+                                Avec les modules Esp32 ayant une prise USB, vous pouvez faire que l'alimentation du module des relais soit faite par le module esp32 lui-même.<br>
+                                Vous pouvez alors alimenter votre esp32 avec une batterie externe (powerBank).<br><br>
+                                <u>Pour des essais uniquement</u>,(un redemarrage manuel peut etre parfois necessaire quand le portier n'est pas connecté pendant un certain temps à ianitor) utilisez le hotspot de votre téléphone:<br>
+                                configurez le portier pour qu'il se connecte au hotspot de votre téléphone pour lui permettre d'aller sur internet obtenir les informations necessaires!<br>
+                            </div>
+                        </div>
+                        
+                    </section>
                 </section>
                 <section id="confiNewEnt">
                     <h2 id="confiNewEntH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#confiNewEntH2Txt" aria-expanded="false" role="button">Création nouvelle entreprise</h2>
