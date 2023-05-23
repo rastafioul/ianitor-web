@@ -44,19 +44,33 @@
                 body {
                     --text-color: #eee;
                     --bkg-color: #121212;
+                    color:#eee;
                 }
                 body.light-theme {
                     --text-color: #222;
                     --bkg-color: #fff;
                 }
-            .day.dark-scheme {
-                background: #333;
-                color: white;
-            }
-            .night.dark-scheme {
-                background: black;
-                color: #ddd;
-            }
+                .day.dark-scheme {
+                    background: rgb(39, 39, 39);
+                    color: white;
+                    --text-color: #eee;
+
+                }
+                .night.dark-scheme {
+                    background: black;
+                    color: #ddd;
+                    --text-color: #eee;
+
+                }
+                .nav-link {
+                    color:#eee;
+                }
+                .nav-link .fas {
+                    color:#eee;
+                }
+                #i {
+                    color:#eee;
+                }
             }
 
             body {
@@ -136,9 +150,9 @@
                     <!-- <div class="d-flex mx-2">
                         <button class="btn btn-outline-danger" onclick="logout();">logout</button>
                     </div> -->
-                    <div class="d-flex">
+                    <!-- <div class="d-flex">
                         <img id="avatar" class="rounded-circle" width="36px" height="36px" src="https://s.gravatar.com/avatar/aa62783cad46d2178c0ba4e688669dec?s=480&amp;r=pg&amp;d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fia.png" onclick="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>
@@ -213,12 +227,12 @@
             </nav>
         </div> -->
         <!-- <div class="full-width"> -->
-        <div class="container row">
+        <div class="container row"  >
             <div class="modal fade" id="imgGallery" style="font-family: 'Roboto' , sans-serif;">
                 <div class="modal-dialog modal-xl" >
                     <div class="modal-content">
                         <div class="modal-header bg-light">
-                            <div class="modal-title" trad="newEnt">gallerie</div>
+                            <div class="modal-title" trad="newEnt">galerie</div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body d-flex justify-content-center">
@@ -232,10 +246,13 @@
                     </div>
                 </div>
             </div>
-            <div id="sdScrollMenu" class="col-12 col-sm-4">
-                     
+            <div class="d-none d-md-block col-sm-4">
+                
+                <ul id="sdScrollMenu" class="fixed-top col-sm-4 pt-5 nav flex-column">
+                </ul>
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8" data-bs-spy="scroll" data-target="#sdScrollMenu"
+                data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
                 <div id="scroll-menu" class="">
 
         <section id="whatisianitorForMainAdmin">
@@ -344,9 +361,9 @@
                         </p>
 
                         <p id="pageConfigPortes">
-                            <h2 id="configPortesH2">Configuration des portes</h2>
+                            <h3 id="configPortesH3">Configuration des portes</h3>
                             <p id="configPortesAvertissement">
-                                <h2 style="color:red">Avertissement</h2>
+                                <h4 id="configPortesAvertissementH4" style="color:red">Avertissement</h4>
                                 Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
                             </p>
                             <p id="configPortier">
@@ -385,7 +402,7 @@
                                 </p>
                             </p>
                             <p id="configPorte">
-                                <h2 id="configPorteH2">Configuration d'une porte</h2>
+                                <h3 id="configPorteH3">Configuration d'une porte</h3>
                                 <p id="configPorteSummary">
                                     vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
                                     <div class="imgPadding">
@@ -688,7 +705,7 @@
         $(document).ready(function () {
        
 
-            // buildMenu("#scroll-menu", {
+            // buildMenu("scroll-menu", {
             //     width: 250, // integer: in px
             //     scrollDuration: 500, // integer: in ms
             //     titles: 'h1, h2, h3, h4, h5, h6', // string: jQuery selectors

@@ -12,7 +12,7 @@ Based on
     $.lis = [];
 
  function buildMenu (el, options) {
-    var $el = $(el)
+    var $el = $("#"+el)
         , level
         , css = {
             // 'padding-left': '15px',
@@ -34,7 +34,120 @@ Based on
         // padding: 10
     });
 
+    // $el.findTEST(options.titles).each(function(i) {
+    //     $.lis[i] = $(this);
+    //     level = this.localName;
+    //     text = $(this).text();
+    //     // <ul class="nav flex-column">
+    //     // <li class="nav-item">
+    //     //   <a class="nav-link active" aria-current="page" href="#">Active</a>
+    //     // </li>
+    //     switch(level) {
+    //         case 'h1':
+    //             $h1 = $('<li class="nav-item />');//.css(css);
+    //             //$h1.addClass("nav flex-column");
+    //             let thisLi = $h1.append('<a class="nav-link" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i});
+    //             console.log("h1: "+text+":"+JSON.stringify($h1));
+    //             $menu.append($h1);
+    //             break;
+    //         case 'h2':
+    //            // $h2 = $('<ul />');//.css(css);
+    //            // $li = $h2.append($('<li class="nav-item collapse" />').html('<a class="nav-link" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+    //             // $li.addClass("nav-item");
+    //             // $a = $li.append($('<a />').html(text).attr("href", $(this).prop("id")));
+    //             // $a.addClass("nav-item");
+    //             if(!$h1){
+    //                 $h2 = $('<li class="nav-item  />');//.css(css);
+    //                 $li = $h2.append('<a class="nav-link" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i});
+                
+    //                  $menu.append($li);
+    //                  console.log("h2: appending to menu : "+text+":"+JSON.stringify($h2));
 
+    //             }
+    //             else{
+    //                 $h2 = $('<ul class="collapse" id="'+$(this).prop("id")+'UL" />');
+    //                 $li = $h2.append($('<li class="nav-item" />').html('<a class="nav-link" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+
+
+    //                 $h1.attr("data-bs-toggle","collapse");
+    //                 $h1.attr("data-bs-target","#"+$(this).prop("id"));
+    //                 $h1.attr("aria-expanded","false");
+    //                 $li.addClass("collapse");
+    //                 // $h1.append($li);
+    //                 $h1.append($h2);
+    //                 console.log("h2: appending to h1 : "+text+":"+JSON.stringify($h2));
+
+    //             }
+
+    //             break;
+    //         case 'h3':
+    //             $h3 = $('<ul />');//.css(css);
+    //             $li = $h3.append($('<li />').html('<a class="nav-link" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+    //             if(!$h2) {$menu.append($li);
+    //                 console.log("h3: appending to menu: "+text+":"+JSON.stringify($h3));
+                
+    //             }
+    //             else 
+    //             {
+    //                 $h2.prop("data-bs-toggle","collapse");
+    //                 $h2.prop("data-bs-target","#"+$(this).prop("id"));
+    //                 $h2.prop("aria-expanded","false");
+    //                 $li.addClass("collapse");
+    //                 $h2.append($li);
+    //                 console.log("h3: appending to h2: "+text+":"+JSON.stringify($h3));
+
+    //             }
+
+    //             break;
+    //         case 'h4':
+    //             $h4 = $('<ul />');//.css(css);
+    //             $li = $h4.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+    //             if(!$h3) 
+    //             {
+    //                 console.log("h4: appending to li: "+text+":"+JSON.stringify($h4));
+    //                 $menu.append($li);}
+    //             else {
+    //                 console.log("h4: appending to h3: "+text+":"+JSON.stringify($h4));
+    //                 $h4.prop("data-bs-toggle","collapse");
+    //                 $h4.prop("data-bs-target","#"+$(this).prop("id"));
+    //                 $h4.prop("aria-expanded","false");
+    //                 $li.addClass("collapse");
+    //                 $h3.append($li);}
+
+    //             break;
+    //         case 'h5':
+    //             $h5 = $('<ul />');//.css(css);
+    //             $li = $h5.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+    //             if(!$h4) $menu.append($li);
+    //             else
+    //             { 
+    //                 $h4.append($li);
+                
+    //                 $h5.prop("data-bs-toggle","collapse");
+    //                 $h5.prop("data-bs-target","#"+$(this).prop("id"));
+    //                 $h5.prop("aria-expanded","false");
+    //                 $li.addClass("collapse");
+    //                 console.log("h5: "+text+":"+JSON.stringify($h5));
+    //             }
+
+    //             break;
+    //         case 'h6':
+    //             $h6 = $('<ul />');//.css(css);
+    //             $li = $h6.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+    //             if(!$h5) $menu.append($li);
+    //             else
+    //             { 
+    //                 $h6.prop("data-bs-toggle","collapse");
+    //                 $h6.prop("data-bs-target","#"+$(this).prop("id"));
+    //                 $h6.prop("aria-expanded","false");
+    //                 $li.addClass("collapse");
+    //                 $h5.append($li);
+    //                 console.log("h6: "+text+":"+JSON.stringify($h6));
+    //             }
+
+    //             break;
+    //     }
+    // });
 
     $el.find(options.titles).each(function(i) {
         $.lis[i] = $(this);
@@ -46,15 +159,15 @@ Based on
         // </li>
         switch(level) {
             case 'h1':
-                $h1 = $('<ul />');//.css(css);
-                $h1.addClass("nav flex-column");
-                let thisLi = $h1.append($('<li class="nav-item" />').html('<a class="nav-link active" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                $h1 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                //$h1.addClass("nav flex-column");
+                let thisLi = $h1.append($('<li class="nav-item" id="'+$(this).prop("id")+'LI" />').html('<a class="nav-link " href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
                 console.log("h1: "+text+":"+JSON.stringify($h1));
                 $menu.append($h1);
                 break;
             case 'h2':
-                $h2 = $('<ul />');//.css(css);
-                $li = $h2.append($('<li class="nav-item" />').html('<a class="nav-link active" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                $h2 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                $li = $h2.append($('<li class="nav-item" id="'+$(this).prop("id")+'LI" />').html('<a class="nav-link " href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
                 // $li.addClass("nav-item");
                 // $a = $li.append($('<a />').html(text).attr("href", $(this).prop("id")));
                 // $a.addClass("nav-item");
@@ -64,7 +177,16 @@ Based on
 
                 }
                 else{
-
+                    // // $('#ulscroller li:last-child')
+                    // $h1('li:last-child').attr("data-bs-toggle","collapse");
+                    // $h1('li:last-child').attr("data-bs-target","#"+$(this).prop("id"));
+                    // $h1('li:last-child').attr("aria-expanded","false");
+                    console.log("h2: appending to h1 : "+$(this).prop("id")+": h1.id = "+$h1.id+",  h1.prop(id) = "+$h1.prop("id") );
+                    $("#"+$h1.prop("id")).children('li').last().attr("data-bs-toggle","collapse");
+                    $("#"+$h1.prop("id")).children('li').last().attr("data-bs-target","."+$h1.prop("id"));
+                    $("#"+$h1.prop("id")).children('li').last().attr("aria-expanded","false");
+                    
+                    $li.addClass("collapse "+$h1.prop("id"));
                     $h1.append($li);
                     console.log("h2: appending to h1 : "+text+":"+JSON.stringify($h2));
 
@@ -72,14 +194,19 @@ Based on
 
                 break;
             case 'h3':
-                $h3 = $('<ul />');//.css(css);
-                $li = $h3.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
-                if(!$h2) {$menu.append($li);
+                $h3 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                $li = $h3.append($('<li />').html('<a class="nav-link " aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                if(!$h2) {
+                    $menu.append($li);
                     console.log("h3: appending to menu: "+text+":"+JSON.stringify($h3));
                 
                 }
                 else 
                 {
+                    $("#"+$h2.prop("id")).children('li').last().attr("data-bs-toggle","collapse");
+                    $("#"+$h2.prop("id")).children('li').last().attr("data-bs-target","."+$h2.prop("id"));
+                    $("#"+$h2.prop("id")).children('li').last().attr("aria-expanded","false");
+                    $li.addClass("collapse "+$h2.prop("id"));
                     $h2.append($li);
                     console.log("h3: appending to h2: "+text+":"+JSON.stringify($h3));
 
@@ -87,31 +214,50 @@ Based on
 
                 break;
             case 'h4':
-                $h4 = $('<ul />');//.css(css);
-                $li = $h4.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                $h4 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                $li = $h4.append($('<li />').html('<a class="nav-link " aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
                 if(!$h3) 
                 {
                     console.log("h4: appending to li: "+text+":"+JSON.stringify($h4));
                     $menu.append($li);}
                 else {
                     console.log("h4: appending to h3: "+text+":"+JSON.stringify($h4));
+                    $("#"+$h3.prop("id")).children('li').last().attr("data-bs-toggle","collapse");
+                    $("#"+$h3.prop("id")).children('li').last().attr("data-bs-target","."+$h3.prop("id"));
+                    $("#"+$h3.prop("id")).children('li').last().attr("aria-expanded","false");
+                    $li.addClass("collapse "+$h3.prop("id"));
                     $h3.append($li);}
 
                 break;
             case 'h5':
-                $h5 = $('<ul />');//.css(css);
-                $li = $h5.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                $h5 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                $li = $h5.append($('<li />').html('<a class="nav-link " aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
                 if(!$h4) $menu.append($li);
-                else $h4.append($li);
-                console.log("h5: "+text+":"+JSON.stringify($h5));
+                else
+                { 
+                    $h4.append($li);
+                
+                    $("#"+$h4.prop("id")).children('li').last().attr("data-bs-toggle","collapse");
+                    $("#"+$h4.prop("id")).children('li').last().attr("data-bs-target","."+$h4.prop("id"));
+                    $("#"+$h4.prop("id")).children('li').last().attr("aria-expanded","false");
+                    $li.addClass("collapse "+$h4.prop("id"));
+                    console.log("h5: "+text+":"+JSON.stringify($h5));
+                }
 
                 break;
             case 'h6':
-                $h6 = $('<ul />');//.css(css);
-                $li = $h6.append($('<li />').html('<a class="nav-link active" aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
+                $h6 = $('<ul id="'+$(this).prop("id")+'" />');//.css(css);
+                $li = $h6.append($('<li />').html('<a class="nav-link " aria-current="page" href="#'+$(this).prop("id")+'">'+text+'</a> ').attr({'data-id': i}));
                 if(!$h5) $menu.append($li);
-                else $h5.append($li);
-                console.log("h6: "+text+":"+JSON.stringify($h6));
+                else
+                { 
+                    $("#"+$h5.prop("id")).children('li').last().attr("data-bs-toggle","collapse");
+                    $("#"+$h5.prop("id")).children('li').last().attr("data-bs-target","."+$h5.prop("id"));
+                    $("#"+$h5.prop("id")).children('li').last().attr("aria-expanded","false");
+                    $li.addClass("collapse "+$h5.prop("id"));
+                    $h5.append($li);
+                    console.log("h6: "+text+":"+JSON.stringify($h6));
+                }
 
                 break;
         }

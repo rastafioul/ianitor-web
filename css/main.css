@@ -1,6 +1,10 @@
 .nav-link {
     color: #000000
 }
+.night.dark-scheme.nav-link{
+    --text-color: rgb(157, 52, 52);
+}
+
 
 .nav-link .fas {
   color: #000000
