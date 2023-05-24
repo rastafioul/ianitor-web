@@ -19,6 +19,8 @@
         rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js">
     </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script>
         let onLoadFunctions = new Array();
 
@@ -26,82 +28,48 @@
             onLoadFunctions[onLoadFunctions.length] = Obj;
         }
     </script>
-    <script src="js/version.js?v=a"></script>
+    <!-- <script src="js/version.js?v=a"></script> -->
     <script src="js/lang.js?v=a"></script>
-    <link href="css/admin.css?v=a" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="row border-bottom  mb-3">
-        <nav id="navbar-admin" class="py-0 navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-md nav-color mb-4">
             <div class="container-fluid">
-                <a class="navbar-brand ianitorFont" href="#">
-                    <div class="d-flex p-0 m-0">
-                        <img id="logoIanitorNav" src="/images/logoIanitorV7.png"
-                            alt="" width="64" height="64">
-                        <div id="logoText" class="d-col d-none">
-                            <div class="row p-0 m-0">Ianitor</div>
-                            <div class="d-flex justify-content-end p-0 m-0" style="font-size: 0.5em;">Door keeper</div>
-                        </div>
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" style="padding: 0 0 0 0;" href="https://ianitordoorkeeper.com"><img id="navbar-img" src="https://doc.ianitordoorkeeper.com/images/logoIanitorV7.png" height="48px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="ulMenu" class="navbar-nav  me-auto mb-2 mb-lg-0">
-                        <li class="nav-item text-truncate">
-                            <a id="profileHome" class="nav-link active" aria-current="page" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show"
-                                onClick="setActiveMenu(this); setActivePage('ouvertureTab')"><i
-                                    class="bi bi-door-open-fill"></i> <span trad="ouvertureTab">Home</span></a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/" id="nav-home-btn"><i class="fas fa-home"></i>
+                                <span id="navHome">Home</span></a>
                         </li>
-
-                        <li class="nav-item text-truncate" data-toggle="collapse">
-                            <a id="profileAdministration" class="nav-link d-none" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show"
-                                onClick="setActiveMenu(this); setActivePage('administrationTab')"><i
-                                    class="bi bi-sliders"></i> <span trad="administration">administration</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/saas" id="nav-config-btn"><i class="fas fa-money-check-alt"></i> <span id="navApp">MySaas</span></a>
                         </li>
-                        <li class="nav-item text-truncate d-none">
-                            <a id="profileOldAdministration" class="nav-link" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show"
-                                onClick="setActiveMenu(this); setActivePage('oldAdministrationTab')" trad="old">old</a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/admin" id="nav-admin-btn"><i class="fas fa-tools"></i> <span id="navAdmin">Admin</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://doc.ianitordoorkeeper.com" id="nav-doc-btn" target="_blank"><i class="fas fa-file-alt"></i> <span id="navDoc">Docs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://status.ianitordoorkeeper.com" id="nav-status-btn" target="_blank"><i class="fas fa-battery-full"></i> <span id="navStatus">Status</span></a>
                         </li>
                     </ul>
-                   
-                    <!-- <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item me-3 me-lg-0 dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-user"></span>
-                                <img id="avatarUser" src="images/person-fill.svg" class="rounded-circle"
-                                    style="max-width: 32px; max-height: 32px;"></i>
-                                <span id="nameBar">not logged</span>
-                                <i class="fas fa-user"></i>
-                            </a>
-                            <ul class="dropdown-menu pb-0" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        onClick="setActiveMenu('profile');setActivePage('profilTab')"><span
-                                            class="glyphicon glyphicon-user"></span>
-                                        profile</a>
-                                <li>
-                                    <hr class="dropdown-divider mb-0">
-                                </li>
-                                <a class="dropdown-item " href="#" onclick="logout()"><span
-                                        class="glyphicon glyphicon-log-out"></span>
-                                    logout</a>
-                        </li>
-                    </ul>
-                    </li>
-                    </ul> -->
+                    <!-- <div class="d-flex mx-2">
+                        <button class="btn btn-outline-danger" onclick="logout();">logout</button>
+                    </div> -->
+                    <!-- <div class="d-flex">
+                        <img id="avatar" class="rounded-circle" width="36px" height="36px" src="https://s.gravatar.com/avatar/aa62783cad46d2178c0ba4e688669dec?s=480&amp;r=pg&amp;d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fia.png" onclick="">
+                    </div> -->
                 </div>
             </div>
         </nav>
+
     </div>
     <div id="mainContainer" class="container" style="font: arial rounded mt-bold">
         

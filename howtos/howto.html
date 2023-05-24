@@ -295,15 +295,95 @@
             <h1 id="useIanitorH1" data-bs-toggle="collapse"  data-bs-target="#useIanitorTxt" aria-expanded="false" aria-controls="useIanitorTxt" role="button">Utiliser Ianitor</h1>
             <div class="collapse" id="useIanitorTxt">
                 <section id="saashupOrderingForMainAdmin">
-                    <h2 id="saashupOrderingForMainAdminH1" class="ms-2">Commander votre service Ianitor</h2>
-                    <h2 id="saashupInscription" class="ms-2">s'inscrire chez le prestataire Saashup</h2>
+                    <h2 id="saashupOrderingForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#saashupOrderingForMainAdminH2Txt" aria-expanded="false" role="button">Commander votre service Ianitor</h2>
+                    <div class="collapse" id="saashupOrderingForMainAdminH2Txt">
+                        <p id="inscriptionSaas">
+                            <span>    cliquez sur "MySaas"<br>
+                                <img width="100%" src="../images/0-clickMySaas.png"  onclick="toMainPicGallery('../images/clickMySaas.png')">
+                            </span>
+                            <span>
+                                Vous serez alors amené à vous inscrire en cliquant sur "sign up" ou "inscription", visible en bas.
+                                <img width="100%" src="../images/1-signInSaas.png"  onclick="toMainPicGallery('../images/1-signInSaas.png')">
+                            </span>
+                            <span>
+                                Vous avez créé un compte.  Vous devez ensuite accepter de partager votre compte avec Ianitor.
+                                <img width="100%" src="../images/2-acceptAccessRequest.png"  onclick="toMainPicGallery('../images/2-acceptAccessRequest.png')">
+                            </span>
+                        </p>
+                        <p id="saasFirstStep">
+                            <span>Une page avec cette partie de visuel sera alors visible<br>
+                                cliquez sur le lien en bleu pour vous permettre d'aller configurer votre moyen de paiement.
+                                <br>
+                                <img width="100%" src="../images/3-PageMySaas1.png"  onclick="toMainPicGallery('../images/3-PageMySaas1.png')">
+                            </span>
+                            <span>
+                                cette page est l'interface de votre compte qui contient vos informations personnelles pour le saas et celles de paiement.<br>
+                                Pour pouvoir payer mensuellement votre abonnement, vous avez besoin de définir votre moyen de paiement.  Actuellement, cela se fait par carte bancaire.<br>
+                                
+                                Cliquez sur "setup payement"<br>
+                                <img width="100%" src="../images/4-Billing1.png"  onclick="toMainPicGallery('../images/4-Billing1.png')">
+                                
+                            </span>
+                            <span>
+                                vous serez amener à remplir les champs concernant votre carte de crédit.<br>
+                                <img width="100%" src="../images/5-paiementSetting1.png"  onclick="toMainPicGallery('../images/5-paiementSetting1.png')">
+                                <br>
+                                Vous aurez aussi probablement besoin d'autoriser par votre application de banque l'autorisation de prélèvement.
+                                Le prestataire hébergeant notre solution est Saashup <img src="https://www.saashup.com/img/logo_saashup.png" alt="saashup"> et il s'occupe de la facturation mensuelle de vos instances.<br>
+                                Vous pourrez autoriser le paiement en étant pleinement rassuré.<br>
+                                
+                            </span>
+                            <span>
+                                Votre moyen de paiement est configuré<br>
+                                <img width="100%" src="../images/6-apresInsertionCarte.png"  onclick="toMainPicGallery('../images/6-apresInsertionCarte.png')">
+                                <br>
+                                Dans le menu du haut, cliquez sur "billing".
+                                <br>
+                                Sur cette page, vous pouvez configurer les informations de la facture dans l'encart 'payement and invoices', avec le petit bohomme avec l'engrenage <img src="../images/6-bis-lienParamFacture.png"> <i class="fas fa-user-cog"></i>.
+                                <img src="../images/7-billingToBuy2.png">
+                                <br>
+                                remplissez les informations et sauvegardez.<br>
+                                <img src="../images/8-billing-billingDetails.png"><br>
+                            </span>
+                            <span>
+                                Puis cliquez sur "buy new instance" pour acheter votre instance.<br>
+                                l'engagement est mensuel, le renouvellement et son paiement mensuel sera automatique.<br>
+                                Vous êtes facturé en fin de mois, par nombre d'instance maximum créées.<br>
+                                Pour rappel, il n'y a pas de prorata au nombre de jours.<br>
+                                <img src="../images/9-billing_buyInstance1.png">
+                            </span>
+                            <span>
+                                Votre instance est en cours de création<br>
+                                <img src="../images/10-mySaas_billing_justBought-creation.png"><br>
+
+                                Vous recevrez un email de confirmation lorsqu'elle sera crée.  rassurez vous c'est assez rapide et vous pouvez éventuellement rafraichir la page au bout d'une ou deux minutes pour voir si elle est désormais active.
+                                <br>
+                                dans l'attente, vous pouvez renomer votre instance par un nom plus facile à identifier.<br>
+                                Juste à droite du nom à côté du logo ianitor, votre souris changera d'aspect.  en cliquant à ce moment, vous pourrez changer le nom.<br>
+                                ici, le nom saashup-ianitor-3225581026699 est remplacé par Ianitor-Demo<br>
+                                <img src="../images/11-changeName2.png"><br>
+                                
+                            </span>
+                            <span>
+                                voici votre instance disponbile.
+                                vous recevrez un email de la part de "support@saashup.com" vous indiquant la bonne création de votre instance.<br>
+                                <img src="../images/13-emailCreationComplete.png"><br>
+                                et son contenu:
+                                <img src="../images/14-emailCreationOK_contenu.png"><br><br>
+                                En cliquant sur le lien, vous pourrez aller la configurer.
+                                <img src="../images/12-mysaas_nameChanged_StatusOk.png"><br>
+
+                            </span>
+                        </p>
+
+                    </div>
                 </section>
                 <section id="registerFirstTimeForMainAdmin">
                 <h2 id="registerfirsttimeH2"  class="ms-2" data-bs-toggle="collapse"  data-bs-target="#registerfirsttimeH2Txt" aria-expanded="false" role="button">Premier accès à votre instance Ianitor</h1>
                     <div class="collapse" id="registerfirsttimeH2Txt">
                         <p id="creationEntGestionnaire">
-                    Une fois l'abonnement effectué, notre prestataire vous fournira rapidement le lien de votre instance de Ianitor. (Même si c'est rapide, il faut le temps de créer votre instance de l'application: caché dans le "cloud internet", il y a du matériel qui travaille)
-                    Suivez ce lien (qui doit être du type <strong>TYPEAMETTRE</strong>)et vous tomberez sur une page de ce type:<br>
+                    Vous avez commandé votre abonnement et dans la page "mySaas", vous avez le lien de votre instance sous la forme "saashup-ianitor-NOMBRE.ianitordoorkeeper.com" (avec NOMBRE, un grand nombre. dans notre demonstration, le lien est: saashup-ianitor-3225581026699.ianitordoorkeeper.com)
+                    En cliquant sur le lien, vous arrivez sur une page de ce type:<br>
                     <div class="imgPadding">
                         <img width="100%" src="../images/ianitorInitialisation1bis.png" onclick="toMainPicGallery('../images/ianitorInitialisation1bis.png')"/>
                     </div>
