@@ -1,6 +1,8 @@
 [{"version":"latest", "name":"latest", "file":"latest.bin"},
+{"version":"ianitordoorkeeperWT32quar0.1.17.34.ino", "name":"0.1.7.17.34", "file":"ianitordoorkeeperWT32quar0.1.17.34.ino.bin"},
 {"version":"ianitordoorkeeperWT32ter0.1.17.30.ino", "name":"0.1.7.17.30", "file":"ianitordoorkeeperWT32ter0.1.17.30.ino.bin"},
 {"version":"ianitordoorkeeperWT32bis0.1.17.28.ino", "name":"0.1.7.17.28", "file":"ianitordoorkeeperWT32bis0.1.17.28.ino.bin"},
 {"version":"ianitordoorkeeperWT32ter0.1.17.29.ino", "name":"0.1.7.17.29 test", "file":"ianitordoorkeeperWT32ter0.1.17.29.ino.bin"},
 {"version":"ianitordoorkeeperESP32.ino0.1.17.11", "name":"0.1.7.17.11", "file":"ianitordoorkeeperESP32.ino0.1.17.11.bin"}
+
 ]
