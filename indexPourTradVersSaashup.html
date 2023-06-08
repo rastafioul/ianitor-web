@@ -1,0 +1,368 @@
+<html>
+
+<head>
+    <title id="mainTitle" trad="mainTitle">Ianitor - Admin - Ouverture Portail - vue Administration</title>
+    <link id="favicon" rel="icon" type="image/png" href="images/favicon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
+        rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js">
+    </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script>
+        let onLoadFunctions = new Array();
+
+        function onLoadFunctionsStack(Obj) {
+            onLoadFunctions[onLoadFunctions.length] = Obj;
+        }
+    </script>
+    <!-- <script src="js/version.js?v=a"></script> -->
+    <script src="js/lang.js?v=a"></script>
+    <!-- <style>
+        @font-face {
+            font-family: 'myarial';
+            src: url('/css/font/arlrdbd.ttf') format('opentype');
+            }
+
+    </style> -->
+
+</head>
+
+<body>
+    <div class="row border-bottom  mb-3">
+        <nav class="navbar navbar-expand-md nav-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="padding: 0 0 0 0;" href="https://ianitordoorkeeper.com"><img id="navbar-img" src="https://doc.ianitordoorkeeper.com/images/logoIanitorV7.png" height="48px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/" id="nav-home-btn"><i class="fas fa-home"></i>
+                                <span id="navHome">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/saas" id="nav-config-btn"><i class="fas fa-money-check-alt"></i> <span id="navApp">MySaas</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://ianitordoorkeeper.com/admin" id="nav-admin-btn"><i class="fas fa-tools"></i> <span id="navAdmin">Admin</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://doc.ianitordoorkeeper.com" id="nav-doc-btn" target="_blank"><i class="fas fa-file-alt"></i> <span id="navDoc">Docs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://status.ianitordoorkeeper.com" id="nav-status-btn" target="_blank"><i class="fas fa-battery-full"></i> <span id="navStatus">Status</span></a>
+                        </li>
+                    </ul>
+                    <!-- <div class="d-flex mx-2">
+                        <button class="btn btn-outline-danger" onclick="logout();">logout</button>
+                    </div> -->
+                    <!-- <div class="d-flex">
+                        <img id="avatar" class="rounded-circle" width="36px" height="36px" src="https://s.gravatar.com/avatar/aa62783cad46d2178c0ba4e688669dec?s=480&amp;r=pg&amp;d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fia.png" onclick="">
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="mainContainer" class="container" style="font: 16px myarial">
+        <!-- <div id="mainContainer" class="container" style="font: myarial"> -->
+        
+        <div class= 'row pb-4 '>
+            <div class= 'col-sm-12 col-md-6 text-left display-6 d-flex align-items-center ' style= 'font: bahnscript '>
+               <strong> SYSTÈMES D’OUVERTURE 
+DE PORTES ET PORTAILS AUTOMATIQUES À DISTANCE
+POUR VOTRE ENTREPRISE</strong>
+            </div>
+            <div class= 'col-sm-12 col-md-6 text-center '>
+                <img src= '/images/mainPic.png ' class= 'img-fluid ' alt= ' '>
+            </div>
+        </div>
+    <div class='row my-3'><p class='h1 p-0'>Vous souhaitez :</p><ul class='ms-4 ps-4'><li> utiliser un smartphone pour ouvrir des portails et des portes  </li><li> Fournir un accès personnalisé à vos locaux pour vos employés (permanents ou temporaires), au moment que vous avez défini ?  </li><li> Permettre à vos prestataires de service / techniciens d’accéder à vos locaux, hors des heures d’ouverture ? </li></ul></div><div class='row p-3 my-5 rounded' style='background-color: #516379; color:white'><p class='display-6 mb-4'><strong>Gérez l’ouverture de vos locaux à distance avec notre solution İanitor </strong></p><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center'><div class='row h3 text-center'><div> Securité </div></div><div class='row'><div><img src='/images/picSecurite.png' height='96' alt=''></div></div><div class='row'><div> Gérez les entrées et sorties de vos locaux<br> et techniquement, vous possèdez votre propre serveur </div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center'><div class='row h3 text-center'><div> Autonomie </div></div><div class='row'><div><img src='/images/picAutonomie.png' height='96' alt=''></div></div><div class='row'><div> Optimisez la mobilité de vos employés et de vos visiteurs </div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center'><div class='row h3 text-center'><div> Facilité </div></div><div class='row'><div><img src='/images/picFacilite.png' height='96' alt=''></div></div><div class='row'><div> Installation et utilisation faciles </div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center'><div class='row h3'><div> Pratique </div></div><div class='row'><div><img src='/images/picPratique.png' height='96' alt=''></div></div><div class='row'><div> Minimum de logistique et d’équipement </div></div></div></div><div class='row'><div class='col-8'><div class='row h1'> Comment cela fonctionne ? </div>  <div class='accordion' id='accordionExample'><div class='accordion-item'>   <h2 class='accordion-header' id='headingOne'><button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>   Le principe en tant qu’utilisateur-administrateur  </button>   </h2>   <div id='collapseOne' class='accordion-collapse collapse show' aria-labelledby='headingOne' data-bs-parent='#accordionExample'><div class='accordion-body'><ul><li>j’invite des utilisateurs <p class='p-3'><img class='img-fluid' src='images/plageDInscription.png'></p></li><li>ils s’inscrivent</li><li>à la date ou ils sont autorisés, ils peuvent ouvrir le portail ou la porte par leur smartphone <div class='row p-3'><div class='col-4 p-2'><img class='img-fluid' src='images/gate2.png'></div><div class='col-8 p-2'><img class='img-fluid' src='images/appuiEcranTelephone.png'></div></div>  </li></ul></div>   </div></div><div class='accordion-item'>   <h2 class='accordion-header' id='headingTwo'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo'>   Le principe technique </button>   </h2>   <div id='collapseTwo' class='accordion-collapse collapse' aria-labelledby='headingTwo' data-bs-parent='#accordionExample'><div class='accordion-body'>   <ul><li> un portier Ianitor (un boitier connecté à internet) se branche electriquement et au gestionnaire d’ouverture de la même manière qu’un bouton d’ouverture </li><li> le portier Ianitor est en communication par internet avec mon instance de l’application (et cette instance a été crée sur son propre serveur) </li><li> mon instance gère les droits des utilisateurs et quand l’utilisateur est autorisé, elle envoie la demande d’ouverture au portier qui fait son travail de... portier! </li><li> si mon entreprise a un proxy, avec des règles, je peux faire passer par la DMZ le flux réseau </li>   </ul>   <img class='img-fluid' src='images/SchemaPrincipe.png'></div>   </div></div><div class='accordion-item'>   <h2 class='accordion-header' id='headingThree'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree'>   Le principe pour faire soi-même (diy - do it yourself) </button>   </h2>   <div id='collapseThree' class='accordion-collapse collapse' aria-labelledby='headingThree' data-bs-parent='#accordionExample'><div class='accordion-body'><ul><li> je me fournis d’un appareil adéquate et je le transforme en portier ianitor grâce à la documentation </li><li>je crée un instance par l’intermédiaire de mon Saas</li><li>je connecte à internet et renseigne le portier ianitor des informations de mon instance</li><li> je suis désormais un utilisateur-administrateur </li></ul>    </div>   </div></div>   </div>  </div><div class='col-4 d-flex justify-content-center align-items-center'><div class=''><img src='/images/picEngrenages.png' width='128' alt=''></div></div></div>
+    
+
+
+
+
+
+
+
+        <div class="row pt-5 border border-top d-none">
+            <hr>
+
+        <!--  SITE SAASHUP sameasThisOne -->
+    <div class="row d-none"> <!-- pour cacher -->
+        <div class="row pt-10 ">
+            <div class="col-sm-12 col-md-6 text-left display-6">
+               <strong> SYSTÈMES D’OUVERTURE 
+DE PORTES ET PORTAILS AUTOMATIQUES À DISTANCE
+POUR VOTRE ENTREPRISE</strong>
+            </div>
+            <!-- <div class="col-sm-12 col-md-6 text-center">
+                <h4 class='m-4'><img src='https://doc.ianitordoorkeeper.com/images/IanitorDoorkeeperEcriture.png'
+                        width='128px'>
+                    - Cloud est le SAAS pour gerer les portes et portails:</h4>
+                <h5 class='h5 m-3'>Creez votre compte</h5>
+                <h5 class='h5 m-3'>Configurez votre moyen de paiement</h5>
+                <h5 class='h5 m-3'>Creez votre instance Ianitor</h5>
+                <h5 class='h5 m-3'>Allez sur le lien de votre instance pour paramètrer vos portes et portails automatiques!
+                </h5>
+                <h5 class='h5 m-3'>Vous êtes un installateur? Contactez-nous avec vos réferences d'entreprise et profitez de
+                    nos
+                    bons plans 'installateur'!</h5><video controls width='250'>
+                    <source src='https://doc.ianitordoorkeeper.com/videos/videoExplicativeFR.mp4' type='video/mp4'></video>
+                <h5 class='h5 mt-5 mb-3'>Powered by <a href='https://saashup.com' target='_blank'>SaaShup</a></h5>
+            </div> -->
+        </div>
+        <div class='row my-3 '>
+            <p class='h1'>Vous souhaitez :</p>
+            <ul class='ms-0 ps-0 ms-md-4 ps-md-4'>
+                <li>
+                    Fournir un accès personnalisé à vos locaux pour vos employés (permanents ou temporaires), au moment que vous avez défini ? 
+                </li>
+                <li>
+                    Permettre à vos prestataires de service / techniciens d’accéder à vos locaux, hors des heures d’ouverture ?
+                </li>
+            </ul>
+        </div>
+        <div class='row p-3 my-5 rounded ' style='background-color: #516379; color:white'>
+            <p class='display-6 mb-4'>
+                <strong>Gérez l’ouverture de vos locaux à distance avec notre solution İanitor </strong>
+            </p>
+            <div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '>
+                <div class='row h3 text-center'>
+                    <div>
+                        Securité
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        <img src='https://doc.ianitordoorkeeper.com/images/picSecurite.png' height='96' alt=''>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        Gérez les entrées et sorties de vos locaux
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '>
+                <div class='row h3 text-center'>
+                    <div>
+                        Autonomie
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        <img src='https://doc.ianitordoorkeeper.com/images/picAutonomie.png' height='96' alt=''>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        Optimisez la mobilité de vos employés et de vos visiteurs
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '>
+                <div class='row h3 text-center'>
+                    <div>
+                        Facilité
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        <img src='https://doc.ianitordoorkeeper.com/images/picFacilite.png' height='96' alt=''>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        Installation et utilisation faciles
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '>
+                <div class='row h3 '>
+                    <div>
+                        Pratique
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        <img src='https://doc.ianitordoorkeeper.com/images/picPratique.png' height='96' alt=''>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div>
+                        Minimum de logistique et d’équipement
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row '>
+            <div class='col-12 col-md-8 text-start'>
+                <div class='row h3'>
+                    Comment cela fonctionne ?
+                </div>
+
+
+                <div class="accordion d-none" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          quelqu'un 
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <div class='row'>
+                    <div class="col-6">je veux être utilisateur uniquement</div>
+                </div>
+                <div class='row collapse' id='explic_installateur'>
+                    <ul>
+                        <li>
+                            Connectez-vous à votre compte et suivez le guide…
+                        </li>
+                        <li>
+                            Gérez les accès depuis les plages d’inscription, selon vos visiteurs
+                        </li>
+                        <li>
+                            Le matériel nécessaire : un téléphone avec connexion Internet
+                        </li>
+                        <li>
+                            Vous n’avez plus qu’à configurer votre interface en suivant notre tutoriel d’information 
+                        </li>
+                    </ul>
+                    et le tour et joué !
+                </div>
+                <div class='row collapse' id='explic_diy'>
+                    <ul>
+                        <li>
+                            Connectez-vous à votre compte et suivez le guide…
+                        </li>
+                        <li>
+                            Gérez les accès depuis les plages d’inscription, selon vos visiteurs
+                        </li>
+                        <li>
+                            Le matériel nécessaire : un téléphone avec connexion Internet
+                        </li>
+                        <li>
+                            Vous n’avez plus qu’à configurer votre interface en suivant notre tutoriel d’information 
+                        </li>
+                    </ul>
+                    et le tour et joué !
+                </div>
+            </div>
+            <div class='col-12 col-md-4 d-flex justify-content-center align-items-center pt-3 pt-md-0'>
+                <div class=''>
+                    <img src='https://doc.ianitordoorkeeper.com/images/picEngrenages.png' width='128' alt=''>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class='row p-3 my-5 rounded' style='background-color: #516379; color:white'><p class='display-6 mb-4'><strong>Gérez l’ouverture de vos locaux à distance avec notre solution İanitor </strong></p><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Securité</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picSecurite.png' height='96' alt=''></div></div><div class='row'><div>Gérez les entrées et sorties de vos locaux</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Autonomie</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picAutonomie.png' height='96' alt=''></div></div><div class='row'><div>Optimisez la mobilité de vos employés et de vos visiteurs</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Facilité</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picFacilite.png' height='96' alt=''></div></div><div class='row'><div>Installation et utilisation faciles</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 '><div>Pratique</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picPratique.png' height='96' alt=''></div></div><div class='row'><div>Minimum de logistique et d’équipement</div></div></div></div>
+
+        <div class='row'><div class='col-12 col-md-8 text-start'><div class='row h3'>Comment cela fonctionne ?</div><div class='row'><ul><li>Connectez-vous à votre compte et suivez le guide…</li><li>Gérez les accès depuis les plages d’inscription, selon vos visiteurs</li><li>Le matériel nécessaire : un téléphone avec connexion Internet</li><li>Vous n’avez plus qu’à configurer votre interface en suivant notre tutoriel d’information </li></ul>et le tour et joué !</div></div><div class='col-12 col-md-4 d-flex justify-content-center align-items-center'><div class=''><img src='https://doc.ianitordoorkeeper.com/images/picEngrenages.png' width='128' alt=''></div></div></div>
+
+        <!-- </div> -->
+
+            <!--- le meme sans /r/n -->
+
+            <style>@font-face {font-family: 'myarial';src: url('/css/font/arlrdbd.ttf') format('opentype');}</style><div class='row p-3 my-5 rounded' style='background-color: #516379; color:white'><p class='display-6 mb-4'><strong>Gérez l’ouverture de vos locaux à distance avec notre solution İanitor </strong></p><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Securité</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picSecurite.png' height='96' alt=''></div></div><div class='row'><div>Gérez les entrées et sorties de vos locaux</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Autonomie</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picAutonomie.png' height='96' alt=''></div></div><div class='row'><div>Optimisez la mobilité de vos employés et de vos visiteurs</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 text-center'><div>Facilité</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picFacilite.png' height='96' alt=''></div></div><div class='row'><div>Installation et utilisation faciles</div></div></div><div class='col-sm-12 col-md-6 col-lg-3 p-2 text-center '><div class='row h3 '><div>Pratique</div></div><div class='row'><div><img src='https://doc.ianitordoorkeeper.com/images/picPratique.png' height='96' alt=''></div></div><div class='row'><div>Minimum de logistique et d’équipement</div></div></div></div><div class='row'><div class='col-8'><div class='row h3'>Comment cela fonctionne ?</div><div class='row'><ul><li>Connectez-vous à votre compte et suivez le guide…</li><li>Gérez les accès depuis les plages d’inscription, selon vos visiteurs</li><li>Le matériel nécessaire : un téléphone avec connexion Internet</li><li>Vous n’avez plus qu’à configurer votre interface en suivant notre tutoriel d’information </li></ul>et le tour et joué !</div></div><div class='col-4 d-flex justify-content-center align-items-center'><div class=''><img src='https://doc.ianitordoorkeeper.com/images/picEngrenages.png' width='128' alt=''></div></div></div>
+
+
+            <!--  SITE SAASHUP ORI -->
+            <div> font: arial rounded mt-bold <br>
+            font ori: 'Space Mono','Courier New',monaco,monospace</div>
+            <div class="row pt-10">
+                <div class="col-sm-12 col-md-6 text-center">
+                    <h4 class='m-4'><img src='https://doc.ianitordoorkeeper.com/images/IanitorDoorkeeperEcriture.png'
+                            width='128px'>
+                        - Cloud est le SAAS pour gerer les portes et portails:</h4>
+                    <h5 class='h5 m-3'>Creez votre compte</h5>
+                    <h5 class='h5 m-3'>Configurez votre moyen de paiement</h5>
+                    <h5 class='h5 m-3'>Creez votre instance Ianitor</h5>
+                    <h5 class='h5 m-3'>Allez sur le lien de votre instance pour paramètrer vos portes et portails automatiques!
+                    </h5>
+                    <h5 class='h5 m-3'>Vous êtes un installateur? Contactez-nous avec vos réferences d'entreprise et profitez de
+                        nos
+                        bons plans 'installateur'!</h5><video controls width='250'>
+                        <source src='https://doc.ianitordoorkeeper.com/videos/videoExplicativeFR.mp4' type='video/mp4'></video>
+                    <h5 class='h5 mt-5 mb-3'>Powered by <a href='https://saashup.com' target='_blank'>SaaShup</a></h5>
+                </div>
+            </div>
+            <div class="row">
+                <p>Ianitor DoorKeeper est un gestionnaire d'ouverture de portes et portails automatiques par
+                    smartphone<br>Très facile à installer dans vos locaux<br>Avec le matériel et Internet par wifi, branchez
+                    2 fils, configurez et ça fonctionne!</p>
+                <h4 class='h5 m-3'>Vous ne changez rien à l'exitant, vous y ajoutez internet!</h4>
+                <h4 class='h4 m-3'>Achetez et installez le matériel vous-même en suivant la <a
+                        href='https://doc.ianitordoorkeeper.com/howtos/howto'> documentation </a></h4>
+            </div>  
+        </div>
+    </div>
+</body>
+<script>
+    //window.location.href="howtos/howto.html";
+    // function changeImageSrc()
+    // {
+    //     for(let thisImg of document.getElementsByTagName("img"))
+    //     {
+    //         let splitSrc = thisImg.src.split("/");
+    //         thisImg.src = splitSrc[splitSrc.length-1];
+    //     }
+    //     //document.getElementById("imageid").src="../template/save.png";
+    // }
+    // document.addEventListener("DOMContentLoaded", function(event) { 
+    // //do work
+    //     console.log(JSON.stringify(document.getElementsByTagName("img")));
+    //     changeImageSrc();
+    // });
+</script>
+
+</html>
