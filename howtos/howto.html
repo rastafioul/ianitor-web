@@ -28,6 +28,8 @@
         <script src="/plugin/jquery.sdBootStrapMenu.js">
         </script>
         <meta name="color-scheme" content="dark light">
+        <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
         <style>
 
 
@@ -121,7 +123,7 @@
 
         </style>
     </head>
-    <body>
+    <body >
         <nav class="navbar navbar-expand-md nav-color mb-4">
             <div class="container-fluid">
                 <a class="navbar-brand" style="padding: 0 0 0 0;" href="https://ianitordoorkeeper.com"><img id="navbar-img" src="https://doc.ianitordoorkeeper.com/images/logoIanitorV7.png" height="48px"></a>
@@ -227,7 +229,7 @@
             </nav>
         </div> -->
         <!-- <div class="full-width"> -->
-        <div class="container row"  >
+        <div class="container row" style="font: 16px myarial" >
             <div class="modal fade" id="imgGallery" style="font-family: 'Roboto' , sans-serif;">
                 <div class="modal-dialog modal-xl" >
                     <div class="modal-content">
@@ -294,225 +296,8 @@
         <section id="useIanitor" class="mt-4">
             <h1 id="useIanitorH1" data-bs-toggle="collapse"  data-bs-target="#useIanitorTxt" aria-expanded="false" aria-controls="useIanitorTxt" role="button">Utiliser Ianitor</h1>
             <div class="collapse" id="useIanitorTxt">
-                <section id="saashupOrderingForMainAdmin">
-                    <h2 id="saashupOrderingForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#saashupOrderingForMainAdminH2Txt" aria-expanded="false" role="button">Commander votre service Ianitor</h2>
-                    <div class="collapse" id="saashupOrderingForMainAdminH2Txt">
-                        <p id="inscriptionSaas">
-                            <span>    cliquez sur "MySaas"<br>
-                                <img width="100%" src="../images/0-clickMySaas.png"  onclick="toMainPicGallery('../images/clickMySaas.png')">
-                            </span>
-                            <span>
-                                Vous serez alors amené à vous inscrire en cliquant sur "sign up" ou "inscription", visible en bas.
-                                <img width="100%" src="../images/1-signInSaas.png"  onclick="toMainPicGallery('../images/1-signInSaas.png')">
-                            </span>
-                            <span>
-                                Vous avez créé un compte.  Vous devez ensuite accepter de partager votre compte avec Ianitor.
-                                <img width="100%" src="../images/2-acceptAccessRequest.png"  onclick="toMainPicGallery('../images/2-acceptAccessRequest.png')">
-                            </span>
-                        </p>
-                        <p id="saasFirstStep">
-                            <span>Une page avec cette partie de visuel sera alors visible<br>
-                                cliquez sur le lien en bleu pour vous permettre d'aller configurer votre moyen de paiement.
-                                <br>
-                                <img width="100%" src="../images/3-PageMySaas1.png"  onclick="toMainPicGallery('../images/3-PageMySaas1.png')">
-                            </span>
-                            <span>
-                                cette page est l'interface de votre compte qui contient vos informations personnelles pour le saas et celles de paiement.<br>
-                                Pour pouvoir payer mensuellement votre abonnement, vous avez besoin de définir votre moyen de paiement.  Actuellement, cela se fait par carte bancaire.<br>
-                                
-                                Cliquez sur "setup payement"<br>
-                                <img width="100%" src="../images/4-Billing1.png"  onclick="toMainPicGallery('../images/4-Billing1.png')">
-                                
-                            </span>
-                            <span>
-                                vous serez amener à remplir les champs concernant votre carte de crédit.<br>
-                                <img width="100%" src="../images/5-paiementSetting1.png"  onclick="toMainPicGallery('../images/5-paiementSetting1.png')">
-                                <br>
-                                Vous aurez aussi probablement besoin d'autoriser par votre application de banque l'autorisation de prélèvement.
-                                Le prestataire hébergeant notre solution est Saashup <img src="https://www.saashup.com/img/logo_saashup.png" alt="saashup"> et il s'occupe de la facturation mensuelle de vos instances.<br>
-                                Vous pourrez autoriser le paiement en étant pleinement rassuré.<br>
-                                
-                            </span>
-                            <span>
-                                Votre moyen de paiement est configuré<br>
-                                <img width="100%" src="../images/6-apresInsertionCarte.png"  onclick="toMainPicGallery('../images/6-apresInsertionCarte.png')">
-                                <br>
-                                Dans le menu du haut, cliquez sur "billing".
-                                <br>
-                                Sur cette page, vous pouvez configurer les informations de la facture dans l'encart 'payement and invoices', avec le petit bohomme avec l'engrenage <img src="../images/6-bis-lienParamFacture.png"> <i class="fas fa-user-cog"></i>.
-                                <img src="../images/7-billingToBuy2.png">
-                                <br>
-                                remplissez les informations et sauvegardez.<br>
-                                <img src="../images/8-billing-billingDetails.png"><br>
-                            </span>
-                            <span>
-                                Puis cliquez sur "buy new instance" pour acheter votre instance.<br>
-                                l'engagement est mensuel, le renouvellement et son paiement mensuel sera automatique.<br>
-                                Vous êtes facturé en fin de mois, par nombre d'instance maximum créées.<br>
-                                Pour rappel, il n'y a pas de prorata au nombre de jours.<br>
-                                <img src="../images/9-billing_buyInstance1.png">
-                            </span>
-                            <span>
-                                Votre instance est en cours de création<br>
-                                <img src="../images/10-mySaas_billing_justBought-creation.png"><br>
-
-                                Vous recevrez un email de confirmation lorsqu'elle sera crée.  rassurez vous c'est assez rapide et vous pouvez éventuellement rafraichir la page au bout d'une ou deux minutes pour voir si elle est désormais active.
-                                <br>
-                                dans l'attente, vous pouvez renomer votre instance par un nom plus facile à identifier.<br>
-                                Juste à droite du nom à côté du logo ianitor, votre souris changera d'aspect.  en cliquant à ce moment, vous pourrez changer le nom.<br>
-                                ici, le nom saashup-ianitor-3225581026699 est remplacé par Ianitor-Demo<br>
-                                <img src="../images/11-changeName2.png"><br>
-                                
-                            </span>
-                            <span>
-                                voici votre instance disponbile.
-                                vous recevrez un email de la part de "support@saashup.com" vous indiquant la bonne création de votre instance.<br>
-                                <img src="../images/13-emailCreationComplete.png"><br>
-                                et son contenu:
-                                <img src="../images/14-emailCreationOK_contenu.png"><br><br>
-                                En cliquant sur le lien, vous pourrez aller la configurer.
-                                <img src="../images/12-mysaas_nameChanged_StatusOk.png"><br>
-
-                            </span>
-                        </p>
-
-                    </div>
-                </section>
-                <section id="registerFirstTimeForMainAdmin">
-                <h2 id="registerfirsttimeH2"  class="ms-2" data-bs-toggle="collapse"  data-bs-target="#registerfirsttimeH2Txt" aria-expanded="false" role="button">Premier accès à votre instance Ianitor</h1>
-                    <div class="collapse" id="registerfirsttimeH2Txt">
-                        <p id="creationEntGestionnaire">
-                    Vous avez commandé votre abonnement et dans la page "mySaas", vous avez le lien de votre instance sous la forme "saashup-ianitor-NOMBRE.ianitordoorkeeper.com" (avec NOMBRE, un grand nombre. dans notre demonstration, le lien est: saashup-ianitor-3225581026699.ianitordoorkeeper.com)
-                    En cliquant sur le lien, vous arrivez sur une page de ce type:<br>
-                    <div class="imgPadding">
-                        <img width="100%" src="../images/ianitorInitialisation1bis.png" onclick="toMainPicGallery('../images/ianitorInitialisation1bis.png')"/>
-                    </div>
-                    L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
-                    Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
-                    indiquez le informations necessaires puis cliquez suivant</br>
-                        </p>
-                        <p id="creationEntreprisePrincipale"><br>
-                            <!-- <div class="imgPadding"> -->
-                        <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorInitialisation2.png" onclick="toMainPicGallery('../images/ianitorInitialisation2.png')"/>
-                            </div>
-                        entrez les informations concernant l'entreprise principale<br>
-                        cliquez suivant<br>
-                        </p>
-                        <p id="creationUser">
-                        entrez vos identifiants, veillez à être au moins administrateur.<br>
-                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation3.png" onclick="toMainPicGallery('../images/ianitorInitialisation3.png')"/>
-                                </div>
-
-                        cliquez suivant<br>
-                        </p>
-                        <p id="creationPortier">
-                        creez le portier qui permettra d'ouvrir les portes.<br>
-                        un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
-                        
-                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation4.png" onclick="toMainPicGallery('../images/ianitorInitialisation4.png')"/>
-                                </div>
-                        cliquez suivant<br>
-                        </p>
-                        <p id="creationPorte">
-                        nommez la premiere porte avec sa localisation.<br>
-                            <div class="imgPadding"><img width="100%" src="../images/ianitorInitialisation5.png" onclick="toMainPicGallery('../images/ianitorInitialisation5.png')"/>
-                                </div>
-                        cliquez creer<br>
-                        vous serez redirigé vers la page d'identifiants.
-                        </p>
-                    </div>
-                </section>
-                <section id="appUseForMainAdmin">
-                    <h2 id="appUseForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#appUseForMainAdminH2Txt" aria-expanded="false" aria-controls="appUseForMainAdminH2Txt" role="button">Utilisation de l'application</h2>
-                    <div id="appUseForMainAdminH2Txt" class="collapse">
-                        <p id="loginpage">
-                            indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
-                            <div class="imgPadding"><img width="100%" src="../images/ianitorLoginPage.png" onclick="toMainPicGallery('../images/ianitorLoginPage.png')"/>
-                                </div>
-                        </p>
-                        <p id="pageAccueil1">
-                            sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
-                            Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
-                            <div class="imgPadding">
-                            <img width="100%" src="../images/ianitor1erePage.png" onclick="toMainPicGallery('../images/ianitor1erePage.png')"/></div>
-
-                            cliquez sur "administration" puis "config portes"
-                        </p>
-
-                        <p id="pageConfigPortes">
-                            <h3 id="configPortesH3">Configuration des portes</h3>
-                            <p id="configPortesAvertissement">
-                                <h4 id="configPortesAvertissementH4" style="color:red">Avertissement</h4>
-                                Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
-                            </p>
-                            <p id="configPortier">
-                                <div class="imgPadding">
-                                    <img width="100%" src="../images/ianitorConfigPortes1.png" onclick="toMainPicGallery('../images/ianitorConfigPortes1.png')"/>
-                                </div>  
-                                Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
-                                Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
-                                Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
-                                <div class="imgPadding">
-                                <img width="50%" src="../images/ianitorConfigPorteLoginHotePwd-Portier.png" onclick="toMainPicGallery('../images/ianitorConfigPorteLoginHotePwd-Portier.png')"/>
-                                </div>
-
-                                <p>
-                                    une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a> des identifiants de votre wifi et de votre instance iantior.
-                                </p>
-                                <p id="confLed">
-                                    <h3 id="confLedH3">Configuration de la led</h3>
-                                    ayez le portier à vos côtés pour vérifier l'allumage de la led.<br>
-                                    sur la page "administration/config. portes", cliquez sur éditer le portier,<br>
-                                    Suivant le type de portier que vous avez, préférez tester les "gpio" 2, 5, 17, 23.<br>
-                                    Quand au clique de "test", la led s'allume puis s'éteint. Ceci signifie que le gpio adéquate est trouvé.<br>
-                                    vous pouvez alors "mettre à jour la led du portier".<br>
-                                </p>
-                                <p id="confRelaisInverses">
-                                    <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
-                                    Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
-                                    <div class="imgPadding">
-                                        <img width="100%" src="../images/relais 5vMonoFleches.jpg" onclick="toMainPicGallery('../images/relais 5vMonoFleches.jpg')">
-                                    </div>
-                                    A sa mise en tension, il va se mettre dans sa position normale.<br>
-                                    Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
-                                    Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
-                                    Toutefois, après avoir cliqué sur "editer le portier", vous pouvez choisir d'inverser l'état du relais en cliquant sur "relais inversé".<br>
-                                    Si le fond devient vert, alors, le changement est enregistré.<br>
-                                </p>
-                            </p>
-                            <p id="configPorte">
-                                <h3 id="configPorteH3">Configuration d'une porte</h3>
-                                <p id="configPorteSummary">
-                                    vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
-                                    <div class="imgPadding">
-                                        <img width="100%" src="../images/ianitorConfigPortes1.png" onclick="toMainPicGallery('../images/ianitorConfigPortes1.png')"/><br>
-                                    </div>
-                                    <div class="imgPadding">
-                                        <img width="50%" src="../images/ianitorConfigPortes2.png" onclick="toMainPicGallery('../images/ianitorConfigPortes2.png')"/>
-                                    </div>
-                                    Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
-                                    L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
-                                    <div class="imgPadding">
-                                        <img width="50%" src="../images/ianitorConfigPorteImage.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')"/>
-                                    </div>
-                                    <div class="imgPadding">
-                                        <img width="100%" src="../images/ianitorAccueilImageDisabled.png" onclick="toMainPicGallery('../images/ianitorAccueilImageDisabled.png')"/>
-                                    </div>
-                                    </br>
-
-                                    De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
-                                    <div class="imgPadding">
-                                        <img width="50%" src="../images/ianitorConfigPorteGpio.png" onclick="toMainPicGallery('../images/ianitorConfigPorteGpio.png')"/>
-                                    </div>
-
-                                </p>
-                            </p>
-                        </p>
-                    </div>
-                </section>
                 <section id="portiersSection">
-                    <h2 id="portiersSectionH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target=".multiCollapsePortier" aria-expanded="false" role="button">Les portiers</h2>
+                    <h2 id="portiersSectionH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target=".multiCollapsePortier" aria-expanded="false" role="button">Choisir le matériel et créer son portier Ianitor</h2>
                     <section id="portiersChoice" class="collapse multiCollapsePortier">
                         <h3 id="portiersChoiceH2" class="ms-4" data-bs-toggle="collapse"  data-bs-target="#portiersChoiceH2Txt" aria-expanded="false" role="button">Choisir son portier</h3>
                         <div class="collapse" id="portiersChoiceH2Txt">
@@ -523,7 +308,7 @@
                                     <li>carte esp32 avec relais inclus</li>
                                 </ul> -->
                             <div id="multiCollapseListPortiers" class="collapse">
-                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#esp32PlusRelais" aria-expanded="false" role="button">module esp32 Wroom + relais</h6>
+                                <h6 class="no-collapse" data-bs-toggle="collapse"  data-bs-target="#esp32PlusRelais" aria-expanded="false" role="button">module esp32 Wroom + relais</h6>
                                 <div class="collapse" id="esp32PlusRelais">
                                     <p>
                                         esp 32 testé:
@@ -556,7 +341,7 @@
                                         tests
                                     </p>
                                 </div>
-                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#WT32PlusRelais" aria-expanded="false" role="button">module wt32 + relais</h6>
+                                <h6 class="no-collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#WT32PlusRelais" aria-expanded="false" role="button">module wt32 + relais</h6>
                                 <div class="collapse" id="WT32PlusRelais">
                                     <p>
                                         esp 32 testé:<br>
@@ -578,7 +363,7 @@
                                         tests
                                     </p>
                                 </div>
-                                <h6 class="collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#carteEsp32WithRelais" aria-expanded="false" role="button">carte esp32 avec relais inclus</h6>
+                                <h6 class="no-collapse multiCollapseListPortiers" data-bs-toggle="collapse"  data-bs-target="#carteEsp32WithRelais" aria-expanded="false" role="button">carte esp32 avec relais inclus</h6>
                                 <div class="collapse" id="carteEsp32WithRelais">
                                     <p>
                                         esp 32 testé:<br>
@@ -633,7 +418,7 @@
                             Validez.<br>
                             Le portier va se connecter à votre réseau wifi puis se connecter à votre instance Ianitor.<br>
                             S'il n'y arrive pas, il proposera à nouveau son réseau wifi en alternance avec le fait d'essayer de se connecter à votre instance.<br>
-                            <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed">la configurer</a> </small>
+                            <small>Si la led ne fonctionne pas, il sera utile de <a href="#confLed" data-bs-toggle="collapse"  data-bs-target="#confLed" >la configurer</a> </small>
                         </div>
                     </section>
                     <section id="configPortiersIanitors" class="collapse multiCollapsePortier">
@@ -668,18 +453,236 @@
                         
                     </section>
                 </section>
+                <section id="saashupOrderingForMainAdmin">
+                    <h2 id="saashupOrderingForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#saashupOrderingForMainAdminH2Txt" aria-expanded="false" role="button">Commander votre service Ianitor</h2>
+                    <div class="collapse" id="saashupOrderingForMainAdminH2Txt">
+                        <p id="inscriptionSaas">
+                            <p>    cliquez sur "MySaas"<br>
+                                <img class="img-fluid" src="../images/0-clickMySaas.png"  onclick="toMainPicGallery('../images/0-clickMySaas.png')">
+                            </p>
+                            <p>
+                                Vous serez alors amené à vous inscrire en cliquant sur "sign up" ou "inscription", visible en bas.
+                                <img class="img-fluid" src="../images/1-signInSaas.png"  onclick="toMainPicGallery('../images/1-signInSaas.png')">
+                            </p>
+                            <p>
+                                Vous avez créé un compte.  Vous devez ensuite accepter de partager votre compte avec Ianitor.
+                                <img class="img-fluid" src="../images/2-acceptAccessRequest.png"  onclick="toMainPicGallery('../images/2-acceptAccessRequest.png')">
+                            </p>
+                        </p>
+                        <p id="saasFirstStep">
+                            <p>Une page avec cette partie de visuel sera alors visible<br>
+                                cliquez sur le lien en bleu pour vous permettre d'aller configurer votre moyen de paiement.
+                                <br>
+                                <img class="img-fluid" src="../images/3-PageMySaas1.png"  onclick="toMainPicGallery('../images/3-PageMySaas1.png')">
+                            </p>
+                            <p>
+                                cette page est l'interface de votre compte qui contient vos informations personnelles pour le saas et celles de paiement.<br>
+                                Pour pouvoir payer mensuellement votre abonnement, vous avez besoin de définir votre moyen de paiement.  Actuellement, cela se fait par carte bancaire.<br>
+                                
+                                Cliquez sur "setup payement"<br>
+                                <img class="img-fluid" src="../images/4-Billing1.png"  onclick="toMainPicGallery('../images/4-Billing1.png')">
+                                
+                            </p>
+                            <p>
+                                vous serez amener à remplir les champs concernant votre carte de crédit.<br>
+                                <img class="img-fluid" src="../images/5-paiementSetting1.png"  onclick="toMainPicGallery('../images/5-paiementSetting1.png')">
+                                <br>
+                                Vous aurez aussi probablement besoin d'autoriser par votre application de banque l'autorisation de prélèvement.
+                                Le prestataire hébergeant notre solution est Saashup <img width="64px" src="https://www.saashup.com/img/logo_saashup.png" alt="saashup"> et il s'occupe de la facturation mensuelle de vos instances.<br>
+                                Vous pourrez autoriser le paiement en étant pleinement rassuré.<br>
+                                
+                            </p>
+                            <p>
+                                Votre moyen de paiement est configuré<br>
+                                <img class="img-fluid" src="../images/6-apresInsertionCarte.png"  onclick="toMainPicGallery('../images/6-apresInsertionCarte.png')">
+                                <br>
+                                Dans le menu du haut, cliquez sur "billing".
+                                <br>
+                                Sur cette page, vous pouvez configurer les informations de la facture dans l'encart 'payement and invoices', avec le petit bohomme avec l'engrenage <!--img src="../images/6-bis-lienParamFacture.png"--> <i class="fas fa-user-cog"></i>.
+                                <img class="img-fluid" src="../images/7-billingToBuy2.png">
+                                <br>
+                                remplissez les informations et sauvegardez.<br>
+                                <img class="img-fluid" src="../images/8-billing-billingDetails.png"><br>
+                            </p>
+                            <p>
+                                Puis cliquez sur "buy new instance" pour acheter votre instance.<br>
+                                l'engagement est mensuel, le renouvellement et son paiement mensuel sera automatique.<br>
+                                Vous êtes facturé en fin de mois, par nombre d'instance maximum créées.<br>
+                                Pour rappel, il n'y a pas de prorata au nombre de jours.<br>
+                                <img src="../images/9-billing_buyInstance1.png">
+                            </p>
+                            <p>
+                                Votre instance est en cours de création<br>
+                                <img src="../images/10-mySaas_billing_justBought-creation.png"><br>
+
+                                Vous recevrez un email de confirmation lorsqu'elle sera crée.  rassurez vous c'est assez rapide et vous pouvez éventuellement rafraichir la page au bout d'une ou deux minutes pour voir si elle est désormais active.
+                                <br>
+                                dans l'attente, vous pouvez renomer votre instance par un nom plus facile à identifier.<br>
+                                Juste à droite du nom à côté du logo ianitor, votre souris changera d'aspect.  en cliquant à ce moment, vous pourrez changer le nom.<br>
+                                ici, le nom saashup-ianitor-3225581026699 est remplacé par Ianitor-Demo<br>
+                                <img src="../images/11-changeName2.png"><br>
+                                
+                            </p>
+                            <p>
+                                voici votre instance disponbile.
+                                vous recevrez un email de la part de "support@saashup.com" vous indiquant la bonne création de votre instance.<br>
+                                <img src="../images/13-emailCreationComplete.png"><br>
+                                et son contenu:
+                                <img src="../images/14-emailCreationOK_contenu.png"><br><br>
+                                En cliquant sur le lien, vous pourrez aller la configurer.
+                                <img src="../images/12-mysaas_nameChanged_StatusOk.png"><br>
+
+                            </p>
+                        </p>
+
+                    </div>
+                </section>
+                <section id="registerFirstTimeForMainAdmin">
+                <h2 id="registerfirsttimeH2"  class="ms-2" data-bs-toggle="collapse"  data-bs-target="#registerfirsttimeH2Txt" aria-expanded="false" role="button">Premier accès à votre instance Ianitor</h1>
+                    <div class="collapse" id="registerfirsttimeH2Txt">
+                        <p id="creationEntGestionnaire">
+                    Vous avez commandé votre abonnement et dans la page "mySaas", vous avez le lien de votre instance sous la forme "saashup-ianitor-NOMBRE.ianitordoorkeeper.com" (avec NOMBRE, un grand nombre. dans notre demonstration, le lien est: saashup-ianitor-3225581026699.ianitordoorkeeper.com)
+                    En cliquant sur le lien, vous arrivez sur une page de ce type:<br>
+                    <div class="imgPadding">
+                        <img class="img-fluid" src="../images/ianitorInitialisation1bis.png" onclick="toMainPicGallery('../images/ianitorInitialisation1bis.png')"/>
+                    </div>
+                    L'entreprise gestionnaire est une entreprise qui peut faire la gestion de plusieurs autres localisées à de multiples endroits.<br>
+                    Dans un premiers temps, il est bon de confondre l'entreprise gestionnaire et l'entreprise principale (souvent une SCI) qui est celle qui accueille dans ses locaux à une même adresse d'autres structures ou locataire.</br>
+                    indiquez le informations necessaires puis cliquez suivant</br>
+                        </p>
+                        <p id="creationEntreprisePrincipale"><br>
+                            <!-- <div class="imgPadding"> -->
+                        <div class="imgPadding">
+                            <img class="img-fluid" src="../images/ianitorInitialisation2.png" onclick="toMainPicGallery('../images/ianitorInitialisation2.png')"/>
+                            </div>
+                        entrez les informations concernant l'entreprise principale<br>
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationUser">
+                        entrez vos identifiants, veillez à être au moins administrateur.<br>
+                            <div class="imgPadding"><img class="img-fluid" src="../images/ianitorInitialisation3.png" onclick="toMainPicGallery('../images/ianitorInitialisation3.png')"/>
+                                </div>
+
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationPortier">
+                        creez le portier qui permettra d'ouvrir les portes.<br>
+                        un portier est un appareil avec des relais qui permet de déclencher l'ouverture de portes et portails<br>
+                        
+                            <div class="imgPadding"><img class="img-fluid" src="../images/ianitorInitialisation4.png" onclick="toMainPicGallery('../images/ianitorInitialisation4.png')"/>
+                                </div>
+                        cliquez suivant<br>
+                        </p>
+                        <p id="creationPorte">
+                        nommez la premiere porte avec sa localisation.<br>
+                            <div class="imgPadding"><img class="img-fluid" src="../images/ianitorInitialisation5.png" onclick="toMainPicGallery('../images/ianitorInitialisation5.png')"/>
+                                </div>
+                        cliquez creer<br>
+                        vous serez redirigé vers la page d'identifiants.
+                        </p>
+                    </div>
+                </section>
+                <section id="appUseForMainAdmin">
+                    <h2 id="appUseForMainAdminH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#appUseForMainAdminH2Txt" aria-expanded="false" aria-controls="appUseForMainAdminH2Txt" role="button">Utilisation de l'application</h2>
+                    <div id="appUseForMainAdminH2Txt" class="collapse">
+                        <p id="loginpage">
+                            indiquez le login et mot de passe que vous venez d'informer et vous assurant d'avoir cliqué sur administrateur.<br>
+                            <div class="imgPadding"><img class="img-fluid" src="../images/ianitorLoginPage.png" onclick="toMainPicGallery('../images/ianitorLoginPage.png')"/>
+                                </div>
+                        </p>
+                        <p id="pageAccueil1">
+                            sur cette page, des indications par défaut ont étées inscrites, elles seront modifiables.<br>
+                            Dans un premier temps, allez controler l'appareil "portier" et son controle sur la première porte ou portail.<br>
+                            <div class="imgPadding">
+                            <img class="img-fluid" src="../images/ianitor1erePage.png" onclick="toMainPicGallery('../images/ianitor1erePage.png')"/></div>
+
+                            cliquez sur "administration" puis "config portes"
+                        </p>
+
+                        <p id="pageConfigPortes">
+                            <h3 id="configPortesH3">Configuration des portes</h3>
+                            <p id="configPortesAvertissement">
+                                <h4 id="configPortesAvertissementH4" style="color:red">Avertissement</h4>
+                                Sur un même portier, s'il y a plusieurs demandes d'ouverture de portes différentes, les portes s'ouvrent les unes après les autres et non pas en même temps.
+                            </p>
+                            <p id="configPortier">
+                                <div class="imgPadding">
+                                    <img class="img-fluid" src="../images/ianitorConfigPortes1.png" onclick="toMainPicGallery('../images/ianitorConfigPortes1.png')"/>
+                                </div>  
+                                Telecharger les fichiers .bin necessaires pour faire fonctionner les portiers Iantiors.<br>
+                                Téléversez-les dans le portier Ianitor (Esp32) par la technique qui lui est adaptée: <a href="#configPortiersIanitors">Configurations du matériel</a><br>
+                                Sur la page correspondant à l'image, veuillez vous préparer à copier les informations du portier de <strong>hostname</strong>, <strong>login</strong>, <strong>mot de passe</strong>.<br>
+                                <div class="imgPadding">
+                                <img width="50%" src="../images/ianitorConfigPorteLoginHotePwd-Portier.png" onclick="toMainPicGallery('../images/ianitorConfigPorteLoginHotePwd-Portier.png')"/>
+                                </div>
+
+                                <p>
+                                    une fois le téléversement effectué et réussi, <a href="#configPortiersSoftware">informez le portier</a> des identifiants de votre wifi et de votre instance iantior.
+                                </p>
+                                <p id="confLed">
+                                    <h3 id="confLedH3">Configuration de la led</h3>
+                                    ayez le portier à vos côtés pour vérifier l'allumage de la led.<br>
+                                    sur la page "administration/config. portes", cliquez sur éditer le portier,<br>
+                                    Suivant le type de portier que vous avez, préférez tester les "gpio" 2, 5, 17, 23.<br>
+                                    Quand au clique de "test", la led s'allume puis s'éteint. Ceci signifie que le gpio adéquate est trouvé.<br>
+                                    vous pouvez alors "mettre à jour la led du portier".<br>
+                                </p>
+                                <p id="confRelaisInverses">
+                                    <h3 id="confRelaisInversesH3">Configuration de l'inversion des relais (NC/NO)</h3>
+                                    Les relais ont des positions "NO" pour "normalement ouvert" et "NC" pour normalement fermé (closed en anglais).<br>
+                                    <div class="imgPadding">
+                                        <img class="img-fluid" src="../images/relais 5vMonoFleches.jpg" onclick="toMainPicGallery('../images/relais 5vMonoFleches.jpg')">
+                                    </div>
+                                    A sa mise en tension, il va se mettre dans sa position normale.<br>
+                                    Nous vous conseillons de faire les branchements sur les connecteur NC ou NO avec le fil pilote de votre porte pour que les portes soient en position fermées à la mise en tension.<br>
+                                    Dans le cas contraire, lors de la mise en tension, toutes les portes vont se déclencher ou inversement, si le portier venait à ne plus etre alimenté, l'état de toutes les portes changera.<br>
+                                    Toutefois, après avoir cliqué sur "editer le portier", vous pouvez choisir d'inverser l'état du relais en cliquant sur "relais inversé".<br>
+                                    Si le fond devient vert, alors, le changement est enregistré.<br>
+                                </p>
+                            </p>
+                            <p id="configPorte">
+                                <h3 id="configPorteH3">Configuration d'une porte</h3>
+                                <p id="configPorteSummary">
+                                    vous pouvez configurer le nom, les commentaires, sa localisation, sa couleur de fond, la couleur de l'écriture, le temps d'action du relais<br>
+                                    <div class="imgPadding">
+                                        <img class="img-fluid" src="../images/ianitorConfigPortes1.png" onclick="toMainPicGallery('../images/ianitorConfigPortes1.png')"/><br>
+                                    </div>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPortes2.png" onclick="toMainPicGallery('../images/ianitorConfigPortes2.png')"/>
+                                    </div>
+                                    Vous pouvez partager cette porte, quand cela est utile, avec les entreprises que vous avez créées.  Ex: le portail ou la barrière d'entrée au parking doit être partagé avec les entreprises locataires souhaités.<br>
+                                    L'image doit etre enregistrée par le bouton "sauvegarder image".<br>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPorteImage.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')"/>
+                                    </div>
+                                    <div class="imgPadding">
+                                        <img class="img-fluid" src="../images/ianitorAccueilImageDisabled.png" onclick="toMainPicGallery('../images/ianitorAccueilImageDisabled.png')"/>
+                                    </div>
+                                    </br>
+
+                                    De meme que le "gpio" adapté au relais qui controlera la porte ou le portail:<br>
+                                    <div class="imgPadding">
+                                        <img width="50%" src="../images/ianitorConfigPorteGpio.png" onclick="toMainPicGallery('../images/ianitorConfigPorteGpio.png')"/>
+                                    </div>
+
+                                </p>
+                            </p>
+                        </p>
+                    </div>
+                </section>
+               
                 <section id="confiNewEnt">
                     <h2 id="confiNewEntH2" class="ms-2" data-bs-toggle="collapse"  data-bs-target="#confiNewEntH2Txt" aria-expanded="false" role="button">Création nouvelle entreprise</h2>
 
                     <div class="collapse" id="confiNewEntH2Txt">
                         Allez dans "administration/infos generales".<br>
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorAdminInfoGen.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')">
+                            <img class="img-fluid" src="../images/ianitorAdminInfoGen.png" onclick="toMainPicGallery('../images/ianitorConfigPorteImage.png')">
                         </div>
                         cliquez "nouvelle entreprise"<br>
                         remplissez les champs<br>
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorAdminNewEntRemplie.png"  onclick="toMainPicGallery('../images/ianitorAdminNewEntRemplie.png')" alt="">
+                            <img class="img-fluid" src="../images/ianitorAdminNewEntRemplie.png"  onclick="toMainPicGallery('../images/ianitorAdminNewEntRemplie.png')" alt="">
                         </div>
                         validez en cliquant "creer"<br>
                         Pensez à creer l'administrateur qui gérera les identifiants des employés de l'entreprise.<br>
@@ -687,11 +690,11 @@
                         Dans "administration/utilisateurs", cliquez sur "nouveau"<br>
                         remplissez les champs en vous assurant que vous avez bien cliqué sur "administrateur" pour que ce compte puisse gèrer les fonctions disponibles à cette entreprise.
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorAdminNewUserModalRemplie.png" onclick="toMainPicGallery('../images/ianitorAdminNewUserModalRemplie.png')" alt="">
+                            <img class="img-fluid" src="../images/ianitorAdminNewUserModalRemplie.png" onclick="toMainPicGallery('../images/ianitorAdminNewUserModalRemplie.png')" alt="">
                         </div>
                         Cet utilisateur apparaitra dans "administration/utilisateurs" et pourra alors gèrer les comptes de son entreprise.<br>
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitorAdminUsers1erUser.png" onclick="toMainPicGallery('../images/ianitorAdminUsers1erUser.png')" alt="">
+                            <img class="img-fluid" src="../images/ianitorAdminUsers1erUser.png" onclick="toMainPicGallery('../images/ianitorAdminUsers1erUser.png')" alt="">
                         </div>
                     </div>
                 </section>
@@ -700,7 +703,7 @@
                     <div class="changePlaqueH2Txt">
                         TODO
                         <div class="imgPadding">
-                            <img width="100%" src="../images/ianitor1erePageChgtPlaqueComm.png" onclick="toMainPicGallery('../images/ianitor1erePageChgtPlaqueComm.png')"/>
+                            <img class="img-fluid" src="../images/ianitor1erePageChgtPlaqueComm.png" onclick="toMainPicGallery('../images/ianitor1erePageChgtPlaqueComm.png')"/>
                         </div>
                     </div>
                 </section>
