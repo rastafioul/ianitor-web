@@ -1,0 +1,20 @@
+{
+  "name": "Ianitor",
+  "version": "2024.0.38quin",
+  "funding_url": "https://esphome.io/guides/supporters.html",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "../firmwares/esp32/merged-firmware.bin", "offset": 0 }
+      ]
+    },
+    {
+      "chipFamily": "ESP32-wt32",
+      "parts": [
+        { "path": "merged-firmwareWT32.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

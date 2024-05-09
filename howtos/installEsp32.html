@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script
+        type="module"
+        src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+      ></script>
+    </head>
+    <body>
+        <h1>install firmware</h1>
+        <esp-web-install-button
+            manifest="manifest.json"
+            ></esp-web-install-button>
+    </body>
+    <script>
+        function changeImageSrc()
+        {
+            for(let thisImg of document.getElementsByTagName("img"))
+            {
+                let splitSrc = thisImg.src.split("/");
+                thisImg.src = splitSrc[splitSrc.length-1];
+            }
+            //document.getElementById("imageid").src="../template/save.png";
+        }
+        document.addEventListener("DOMContentLoaded", function(event) { 
+        //do work
+            
+            //changeImageSrc();
+        });
+    </script>
+</html>
