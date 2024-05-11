@@ -1,0 +1,21 @@
+{
+    "name": "LockChoc",
+    "version": "1.0.1j",
+    "funding_url": "https://esphome.io/guides/supporters.html",
+    "new_install_prompt_erase": true,
+    "builds": [
+      {
+        "chipFamily": "ESP32",
+        "parts": [
+          { "path": "firmwares/esp32/merged-firmware.bin", "offset": 0 }
+        ]
+      },
+      {
+        "chipFamily": "ESP32-wt32",
+        "parts": [
+          { "path": "firmwares/esp32/merged-firmwareWT32.bin", "offset": 0 }
+        ]
+      }
+    ]
+  }
+  
