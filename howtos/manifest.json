@@ -1,6 +1,6 @@
 {
-  "name": "Ianitor",
-  "version": "2024.0.38quin",
+  "name": "Ianitor Doorkeeper",
+  "version": "0.1.18.0Test",
   "funding_url": "https://esphome.io/guides/supporters.html",
   "new_install_prompt_erase": true,
   "builds": [
